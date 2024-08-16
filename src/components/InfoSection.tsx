@@ -46,7 +46,7 @@ const InfoSection: React.FC = () => {
             const percentage = ((data.datasets[0].data[index] / data.datasets[0].data.reduce((a, b) => a + b, 0)) * 100).toFixed(2);
             const text = document.createElement('p');
             text.className = 'text-sm';
-            text.innerText = `${percentage}% on ${item.text}`;
+            text.innerText = `${percentage}% ${item.text}`;
             legendItem.appendChild(colorBox);
             legendItem.appendChild(text);
             container.appendChild(legendItem);
