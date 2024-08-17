@@ -26,6 +26,7 @@ const Media: React.FC = () => {
             </button>
           </div>
         </div>
+       
         <div className="bg-white p-6 text-[#525560] rounded-xl space-y-6">
           <div className="flex flex-row gap-6">
             <img

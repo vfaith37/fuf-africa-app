@@ -14,71 +14,22 @@ const Donation: React.FC = () => {
           </div>
           <div className="pt-6 md:pt-8 px-2 md:px-[64px]">
             <h1 className="font-bold text-2xl md:text-5xl mb-4 md:mb-12">
-              Our goal is to provide inclusive care for children with special
-              needs
+              Making a donation for our children.
             </h1>
             <p className="font-normal text-sm md:text-base mb-6 md:mb-9 text-[#525560]">
-              Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.
-              Nunc ut sem vitae risus tristique posuere.
+              When you donate, you’re supporting effective care to children with
+              special needs—an investment in the leaders of tomorrow.
             </p>
             <button className="bg-[#F2C94C] px-8 py-4 rounded-sm font-medium">
-              Read more
+              Donate now
             </button>
           </div>
         </div>
-        <div className="bg-white p-6 text-[#525560] rounded-xl space-y-6">
-          <div className="flex flex-row gap-6">
-            <img
-              src="https://img.freepik.com/free-photo/pleased-looking-side-young-african-american-male-hat-wearing-green-shirt-isoloated-white-background_141793-138920.jpg?t=st=1723810482~exp=1723814082~hmac=6657cb9e7956a588ed788e50d4cfcfe2a584470e667ea51cbef179f1bfdc2482&w=1380"
-              alt=""
-              className="w-48 h-40 rounded-xl object-cover"
-            />
-            <div>
-              <p className="text-[#1D2130] font-bold text-xl">
-                Autism Care Day
-              </p>
-              <p className="my-2 font-bold text-sm">15th Nov 2022</p>
-              <p className="font-normal text-base">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse varius enim
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-row gap-6">
-            <img
-              src="https://img.freepik.com/free-photo/pleased-looking-side-young-african-american-male-hat-wearing-green-shirt-isoloated-white-background_141793-138920.jpg?t=st=1723810482~exp=1723814082~hmac=6657cb9e7956a588ed788e50d4cfcfe2a584470e667ea51cbef179f1bfdc2482&w=1380"
-              alt=""
-              className="w-48 h-40 rounded-xl object-cover"
-            />
-            <div>
-              <p className="text-[#1D2130] font-bold text-xl">
-                Autism Care Day
-              </p>
-              <p className="my-2 font-bold text-sm">15th Nov 2022</p>
-              <p className="font-normal text-base">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse varius enim
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-row gap-6">
-            <img
-              src="https://img.freepik.com/free-photo/pleased-looking-side-young-african-american-male-hat-wearing-green-shirt-isoloated-white-background_141793-138920.jpg?t=st=1723810482~exp=1723814082~hmac=6657cb9e7956a588ed788e50d4cfcfe2a584470e667ea51cbef179f1bfdc2482&w=1380"
-              alt=""
-              className="w-48 h-40 rounded-xl object-cover"
-            />
-            <div>
-              <p className="text-[#1D2130] font-bold text-xl">
-                Autism Care Day
-              </p>
-              <p className="my-2 font-bold text-sm">15th Nov 2022</p>
-              <p className="font-normal text-base">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse varius enim
-              </p>
-            </div>
-          </div>
-        </div>
+        <img
+          src="https://img.freepik.com/free-photo/smiley-woman-holding-box-donations_23-2148687288.jpg?t=st=1723923637~exp=1723927237~hmac=5096cde6661cb627a5875d3b32327c6bf7e3682a5d58bd8c975fb30f8acccf71&w=740"
+          alt=""
+          className="rounded-xl object-cover w-[480px] h-[384px]"
+        />
       </section>
     </>
   );
