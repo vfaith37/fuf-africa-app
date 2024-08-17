@@ -1,8 +1,8 @@
-// src/pages/Media.tsx
+// src/pages/Donation.tsx
 import React from "react";
 import Header from "../components/Header";
 
-const Media: React.FC = () => {
+const Donation: React.FC = () => {
   return (
     <>
       <Header />
@@ -84,4 +84,4 @@ const Media: React.FC = () => {
   );
 };
 
-export default Media;
+export default Donation;

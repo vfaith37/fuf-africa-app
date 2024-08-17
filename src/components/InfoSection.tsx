@@ -5,13 +5,13 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const data = {
-  labels: ['Education', 'Healthcare', 'Infrastructure', 'Other'],
+  labels: ['child care home', 'cleanliness program', 'helping people', 'excurion', 'feeding the poor'],
   datasets: [
     {
       label: 'Donation Distribution',
-      data: [30, 20, 25, 25],
-      backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0'],
-      hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0'],
+      data: [40, 35, 10, 10, 5],
+      backgroundColor: ['#BEF3C0', '#AC94F1', '#FFF0CA', '#F9CF64', '#F38FBF'],
+      hoverBackgroundColor: ['#BEF3C0', '#AC94F1', '#FFF0CA', '#F9CF64', '#F38FBF'],
       borderColor: 'transparent',
       borderWidth: 0,
     },
