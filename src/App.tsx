@@ -5,6 +5,7 @@ import About from "./pages/About";
 import WhatWeDo from "./pages/WhatWeDo";
 import Media from "./pages/Media";
 import Contact from "./pages/Contact";
+import Donation from "./pages/Donation";
 
 const App: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const App: React.FC = () => {
         <Route path="/what-we-do" element={<WhatWeDo />} />
         <Route path="/media" element={<Media />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/donate" element={<Donation />} />
       </Routes>
     </Router>
   );
