@@ -2,6 +2,7 @@
 import React from "react";
 import Header from "../components/Header";
 import { FaDog } from "react-icons/fa6";
+import Footer from "../components/Footer";
 
 const WhatWeDo: React.FC = () => {
   return (
@@ -32,32 +33,34 @@ const WhatWeDo: React.FC = () => {
         />
       </section>
       <section className="px-8 py-24 md:px-28 mb-16 text-[#1D2130] bg-[#FCEDC6]">
-        <h1 className="font-bold text-4xl md:text-5xl mb-16">What we do for people with special needs</h1>
+        <h1 className="font-bold text-4xl md:text-5xl mb-16">
+          What we do for people with special needs
+        </h1>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
-            <div className="flex items-start gap-6">
-              <div className="bg-black p-2 text-white rounded-lg">
-                <FaDog size={28} />
-              </div>
-              <div>
-                <h3 className="text-lg font-bold">Family support</h3>
-                <p className="text-sm md:text-base">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Suspendisse varius enim in eros.
-                </p>
-              </div>
+          <div className="flex items-start gap-6">
+            <div className="bg-black p-2 text-white rounded-lg">
+              <FaDog size={28} />
             </div>
-            <div className="flex items-start gap-6">
-              <div className="bg-black p-2 text-white rounded-lg">
-                <FaDog size={28} />
-              </div>
-              <div>
-                <h3 className="text-lg font-bold gap-6">Health benefits</h3>
-                <p className="text-sm md:text-base">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Suspendisse varius enim in eros.
-                </p>
-              </div>
+            <div>
+              <h3 className="text-lg font-bold">Family support</h3>
+              <p className="text-sm md:text-base">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros.
+              </p>
             </div>
+          </div>
+          <div className="flex items-start gap-6">
+            <div className="bg-black p-2 text-white rounded-lg">
+              <FaDog size={28} />
+            </div>
+            <div>
+              <h3 className="text-lg font-bold gap-6">Health benefits</h3>
+              <p className="text-sm md:text-base">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros.
+              </p>
+            </div>
+          </div>
           <div className="flex items-start gap-6">
             <div className="bg-black p-2 text-white rounded-lg">
               <FaDog size={28} />
@@ -108,6 +111,7 @@ const WhatWeDo: React.FC = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 };

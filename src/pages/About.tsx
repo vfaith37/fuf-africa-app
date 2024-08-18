@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { FaFacebook, FaXTwitter, FaLinkedin } from "react-icons/fa6";
-import Event from "./Events";
+import Event from "../components/Events";
 import { fetchImageUrl } from "../utils/storageUtils";
 import Volunteer from "../components/Volunteer";
 

@@ -6,7 +6,7 @@ import InfoSection from "../components/InfoSection";
 import Footer from "../components/Footer";
 import { FaDog } from "react-icons/fa6";
 import Volunteer from "../components/Volunteer";
-import Event from "./Events";
+import Event from "../components/Events";
 
 const Home: React.FC = () => {
   return (

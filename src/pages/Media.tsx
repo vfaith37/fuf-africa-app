@@ -1,6 +1,7 @@
 // src/pages/Media.tsx
 import React from "react";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const Media: React.FC = () => {
   return (
@@ -81,6 +82,7 @@ const Media: React.FC = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 };

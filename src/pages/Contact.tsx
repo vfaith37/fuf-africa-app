@@ -3,6 +3,7 @@ import React from "react";
 import Header from "../components/Header";
 import { FaFacebook, FaXTwitter, FaLinkedin } from "react-icons/fa6";
 import ContactForm from "../components/ContactForm";
+import Footer from "../components/Footer";
 
 const Contact: React.FC = () => {
   return (
@@ -51,6 +52,7 @@ const Contact: React.FC = () => {
         </div>
       </section>
       <ContactForm />
+      <Footer />
     </>
   );
 };

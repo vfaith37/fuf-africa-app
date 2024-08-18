@@ -2,6 +2,7 @@
 import React from "react";
 import Header from "../components/Header";
 import MenuComponent from "../components/MenuComponent";
+import Footer from "../components/Footer";
 
 const Donation: React.FC = () => {
   return (
@@ -50,6 +51,7 @@ const Donation: React.FC = () => {
           cursus id rutrum lorem imperdiet.
         </p>
       </div>
+      <Footer />
     </>
   );
 };
