@@ -156,20 +156,20 @@ const About: React.FC = () => {
           </p>
         </div>
       </section>
-      <section className="py-11 px-11 mb-16 text-[#1D2130]">
+      <section className="py-11 px-6 md:px-11 mb-16 text-[#1D2130]">
         <div className="bg-[#F2C94C] rounded-lg px-12 py-14 flex flex-col lg:gap-10 lg:flex-row">
           <div>
             <h1 className="font-bold text-base">OUR</h1>
-            <h1 className="font-bold text-base ml-4 mb-20 md:mb-[90px]">
+            <h1 className="font-bold text-base ml-4 mb-8 md:mb-[90px]">
               JOURNEY
             </h1>
-            <p className="font-normal text-base md:mb-8 mb-11">
+            <p className="font-normal text-base mb-8">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Suspendisse varius enim in eros elementum tristique. Duis cursus,
               mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
               libero vitae erat. Aenean faucibus nibh.
             </p>
-            <div className="px-16 md:px-0 flex gap-8 text-black mb-14">
+            <div className="flex gap-8 text-black mb-14">
               <div>
                 <p className="font-medium text-2xl">34M+</p>
                 <p className="font-medium text-xs">Donation Recieved</p>
@@ -188,7 +188,7 @@ const About: React.FC = () => {
           </div>
           <img
             src={sectionBackgroundImageUrl}
-            className="h-[396px] md:h-[448px] md:w-[612px] w-full rounded-xl mb-14 md:mb-0 md:py-16 object-cover"
+            className="h-[396px] md:h-[448px] md:w-[612px] w-full rounded-xl md:py-16 object-cover"
           />
         </div>
       </section>
