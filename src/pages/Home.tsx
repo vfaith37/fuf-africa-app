@@ -5,6 +5,8 @@ import Hero from "../components/Hero";
 import InfoSection from "../components/InfoSection";
 import Footer from "../components/Footer";
 import { FaDog } from "react-icons/fa6";
+import Volunteer from "../components/Volunteer";
+import Event from "./Events";
 
 const Home: React.FC = () => {
   return (
@@ -54,13 +56,13 @@ const Home: React.FC = () => {
           <p className="text-sm md:text-base mb-8">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
             varius enim in eros elementum tristique.
-          <div className="md:hidden order-3 my-8">
-            <img
-              className="w-full h-auto object-cover rounded-lg"
-              src="https://img.freepik.com/free-photo/pleased-looking-side-young-african-american-male-hat-wearing-green-shirt-isoloated-white-background_141793-138920.jpg?t=st=1723810482~exp=1723814082~hmac=6657cb9e7956a588ed788e50d4cfcfe2a584470e667ea51cbef179f1bfdc2482&w=1380"
-              alt="Family support"
-            />
-          </div>
+            <div className="md:hidden order-3 my-8">
+              <img
+                className="w-full h-auto object-cover rounded-lg"
+                src="https://img.freepik.com/free-photo/pleased-looking-side-young-african-american-male-hat-wearing-green-shirt-isoloated-white-background_141793-138920.jpg?t=st=1723810482~exp=1723814082~hmac=6657cb9e7956a588ed788e50d4cfcfe2a584470e667ea51cbef179f1bfdc2482&w=1380"
+                alt="Family support"
+              />
+            </div>
           </p>
           <div className="space-y-6">
             <div className="flex items-start gap-6">
@@ -122,6 +124,8 @@ const Home: React.FC = () => {
         </div>
       </section>
       <InfoSection />
+      <Volunteer />
+      <Event />
       <Footer />
     </>
   );

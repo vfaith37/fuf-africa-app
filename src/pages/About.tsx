@@ -1,9 +1,11 @@
 // src/pages/About.tsx
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { FaFacebook, FaXTwitter, FaLinkedin } from "react-icons/fa6";
 import Event from "./Events";
+import { fetchImageUrl } from "../utils/storageUtils";
+import Volunteer from "../components/Volunteer";
 
 interface TeamMember {
   name: string;
@@ -14,12 +16,11 @@ interface TeamMember {
   linkedinUrl: string;
 }
 
-const teamMembers: TeamMember[] = [
+const initialTeamMembers: TeamMember[] = [
   {
     name: "John Doe",
     position: "Software Engineer",
-    imageUrl:
-      "https://img.freepik.com/free-photo/pleased-looking-side-young-african-american-male-hat-wearing-green-shirt-isoloated-white-background_141793-138920.jpg?t=st=1723810482~exp=1723814082~hmac=6657cb9e7956a588ed788e50d4cfcfe2a584470e667ea51cbef179f1bfdc2482&w=1380",
+    imageUrl: "ADP_7008.jpg",
     facebookUrl: "https://facebook.com/johndoe",
     twitterUrl: "https://twitter.com/johndoe",
     linkedinUrl: "https://linkedin.com/in/johndoe",
@@ -27,8 +28,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Jane Doe",
     position: "Software Engineer",
-    imageUrl:
-      "https://img.freepik.com/free-photo/african-woman-posing-looking-up_23-2148747978.jpg?t=st=1723810574~exp=1723814174~hmac=ca76bccd3bdbcbf402a14eb8234ecf7b648a611673fb8026824696f9f3b4ddf4&w=740",
+    imageUrl: "IMG_6749.jpg",
     facebookUrl: "https://facebook.com/johndoe",
     twitterUrl: "https://twitter.com/johndoe",
     linkedinUrl: "https://linkedin.com/in/johndoe",
@@ -36,8 +36,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "James Dane",
     position: "Software Engineer",
-    imageUrl:
-      "https://img.freepik.com/free-photo/attractive-mixed-race-male-with-positive-smile-shows-white-teeth-keeps-hands-stomach-being-high-spirit-wears-white-shirt-rejoices-positive-moments-life-people-emotions-concept_273609-15527.jpg?t=st=1723810470~exp=1723814070~hmac=55eff90a04cdb97aaf01b5c76c99594fc7b92cb19335f813a4d01d5b5b5e4ebb&w=1380",
+    imageUrl: "ADP_7008.jpg",
     facebookUrl: "https://facebook.com/johndoe",
     twitterUrl: "https://twitter.com/johndoe",
     linkedinUrl: "https://linkedin.com/in/johndoe",
@@ -45,16 +44,37 @@ const teamMembers: TeamMember[] = [
   {
     name: "Jane Smith",
     position: "Project Manager",
-    imageUrl:
-      "https://img.freepik.com/free-photo/happiness-wellbeing-confidence-concept-cheerful-attractive-african-american-woman-curly-haircut-cross-arms-chest-self-assured-powerful-pose-smiling-determined-wear-yellow-sweater_176420-35063.jpg?t=st=1723810610~exp=1723814210~hmac=156847f94b0301af7a8596f7a821e384f67b216cd96d018f261701ba58e47107&w=1380",
+    imageUrl: "IMG_6749.jpg",
     facebookUrl: "https://facebook.com/janesmith",
     twitterUrl: "https://twitter.com/janesmith",
     linkedinUrl: "https://linkedin.com/in/janesmith",
   },
-  // Add more team members as needed
 ];
 
 const About: React.FC = () => {
+  const [teamMembers, setTeamMembers] =
+    useState<TeamMember[]>(initialTeamMembers);
+  const [sectionBackgroundImageUrl, setSectionBackgroundImageUrl] =
+    useState<string>("");
+
+  useEffect(() => {
+    const loadImages = async () => {
+      const sectionImageUrl = await fetchImageUrl("IMG_6753.jpg");
+
+      if (sectionImageUrl) setSectionBackgroundImageUrl(sectionImageUrl);
+
+      const updatedTeamMembers = await Promise.all(
+        initialTeamMembers.map(async (member) => {
+          const imageUrl = await fetchImageUrl(member.imageUrl);
+          return { ...member, imageUrl: imageUrl || member.imageUrl };
+        })
+      );
+      setTeamMembers(updatedTeamMembers);
+    };
+
+    loadImages();
+  }, []);
+
   return (
     <div className="overflow-hidden">
       <Header />
@@ -79,6 +99,32 @@ const About: React.FC = () => {
           </p>
         </div>
       </section>
+
+      <div className="absolute top-[550px] md:top-[400px] rounded-2xl px-28 h-auto w-full">
+        <img
+          src="https://img.freepik.com/free-photo/pleased-looking-side-young-african-american-male-hat-wearing-green-shirt-isoloated-white-background_141793-138920.jpg?t=st=1723810482~exp=1723814082~hmac=6657cb9e7956a588ed788e50d4cfcfe2a584470e667ea51cbef179f1bfdc2482&w=1380"
+          alt="NGO group"
+          className="rounded-lg w-full h-96 object-cover"
+        />
+        <button
+          className="absolute inset-0 flex items-center justify-center"
+          aria-label="Play Video"
+        >
+          <div className="bg-white p-4 rounded-full">
+            <svg
+              className="w-12 h-12 text-gray-800"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fillRule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1.72-9.78a.75.75 0 011.16-.64l4.5 2.25a.75.75 0 010 1.28l-4.5 2.25a.75.75 0 01-1.16-.64v-4.5z"
+                clipRule="evenodd"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
 
       <section className="text-[#1D2130] bg-[#FCEDC6] pt-56 py-14 px-11 pb-16">
         <div className="mb-16">
@@ -141,9 +187,8 @@ const About: React.FC = () => {
             </div>
           </div>
           <img
-            src="https://images.pexels.com/photos/2361103/pexels-photo-2361103.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            alt="image"
-            className="h-[396px] md:h-[448px] md:w-[612px] w-full rounded-lg mb-14 md:mb-0 md:py-16 object-cover"
+            src={sectionBackgroundImageUrl}
+            className="h-[396px] md:h-[448px] md:w-[612px] w-full rounded-xl mb-14 md:mb-0 md:py-16 object-cover"
           />
         </div>
       </section>
@@ -190,28 +235,7 @@ const About: React.FC = () => {
           ))}
         </div>
       </section>
-      <section className="flex flex-col justify-center items-center text-white px-4 h-96 mb-16">
-        <div
-          className="bg-cover flex flex-col justify-center items-center text-white w-full rounded-lg h-96 px-6"
-          style={{
-            backgroundImage:
-              "url('https://img.freepik.com/free-photo/medium-shot-smiley-african-boys_23-2148860433.jpg?t=st=1723810992~exp=1723814592~hmac=1f55ed6ad9ca3a4e4633467d7ee438883cbd3388124021f2ea8f23dec238470b&w=1380')",
-          }}
-        >
-          <p className="font-bold text-4xl text-center mb-4 w-[620px]">
-            You can contribute to provide a place for children with special
-            needs!
-          </p>
-          <div className="flex text-black gap-6">
-            <button className="bg-[#F2C94C] px-4 py-2 rounded-sm font-medium">
-              Join as a volunteer
-            </button>
-            <button className="bg-white px-4 py-2 rounded-sm font-medium">
-              Donate
-            </button>
-          </div>
-        </div>
-      </section>
+      <Volunteer />
       <Event />
       <Footer />
     </div>

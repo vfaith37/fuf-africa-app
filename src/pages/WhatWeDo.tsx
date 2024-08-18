@@ -23,15 +23,6 @@ const WhatWeDo: React.FC = () => {
               mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
               libero vitae erat.
             </p>
-            {/* <p className="font-normal text-sm md:text-base mb-6 md:mb-8">
-              ‍Duis cursus, mi quis viverra ornare, eros dolor interdum nulla,
-              ut commodo diam libero vitae erat. Aenean faucibus nibh et justo
-              cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus
-              tristique posuere.
-            </p> */}
-            {/* <button className="bg-[#F2C94C] p-3 rounded-sm font-medium">
-              Learn more
-            </button> */}
           </div>
         </div>
         <img
@@ -40,7 +31,7 @@ const WhatWeDo: React.FC = () => {
           alt="video"
         />
       </section>
-      <section className="py-24 px-28 mb-16 text-[#1D2130] bg-[#FCEDC6]">
+      <section className="px-8 py-24 md:px-28 mb-16 text-[#1D2130] bg-[#FCEDC6]">
         <h1 className="font-bold text-4xl md:text-5xl mb-16">What we do for people with special needs</h1>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
             <div className="flex items-start gap-6">
