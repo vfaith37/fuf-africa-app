@@ -13,40 +13,22 @@ const Header: React.FC = () => {
       <div className="container mx-auto flex justify-between items-center p-4">
         <div className="text-xl font-bold">FUF AFRICA</div>
         <nav className="hidden md:flex space-x-6 flex-grow justify-center">
-          <Link
-            to="/"
-            className={linkClasses("/")}
-          >
+          <Link to="/" className={linkClasses("/")}>
             Home
           </Link>
-          <Link
-            to="/about"
-            className={linkClasses("/about")}
-          >
+          <Link to="/about" className={linkClasses("/about")}>
             About Us
           </Link>
-          <Link
-            to="/what-we-do"
-            className={linkClasses("/what-we-do")}
-          >
+          <Link to="/what-we-do" className={linkClasses("/what-we-do")}>
             What We Do
           </Link>
-          <Link
-            to="/media"
-            className={linkClasses("/media")}
-          >
+          <Link to="/media" className={linkClasses("/media")}>
             Media
           </Link>
-          <Link
-            to="/contact"
-            className={linkClasses("/contact")}
-          >
+          <Link to="/contact" className={linkClasses("/contact")}>
             Contact
           </Link>
-          <Link
-            to="/blog"
-            className={linkClasses("/blog")}
-          >
+          <Link to="/blog" className={linkClasses("/blog")}>
             Blog
           </Link>
         </nav>
@@ -75,16 +57,10 @@ const Header: React.FC = () => {
       </div>
       {isOpen && (
         <div className="md:hidden bg-white shadow-md p-4">
-          <Link
-            to="/"
-            className={`block py-2 ${linkClasses("/")}`}
-          >
+          <Link to="/" className={`block py-2 ${linkClasses("/")}`}>
             Home
           </Link>
-          <Link
-            to="/about"
-            className={`block py-2 ${linkClasses("/about")}`}
-          >
+          <Link to="/about" className={`block py-2 ${linkClasses("/about")}`}>
             About Us
           </Link>
           <Link
@@ -93,10 +69,7 @@ const Header: React.FC = () => {
           >
             What We Do
           </Link>
-          <Link
-            to="/media"
-            className={`block py-2 ${linkClasses("/media")}`}
-          >
+          <Link to="/media" className={`block py-2 ${linkClasses("/media")}`}>
             Media
           </Link>
           <Link
@@ -110,6 +83,9 @@ const Header: React.FC = () => {
             className="block py-2 mt-2 bg-gray-900 text-white text-center rounded hover:bg-gray-800"
           >
             Donate
+          </Link>
+          <Link to="/blog" className={linkClasses("/blog")}>
+            Blog
           </Link>
         </div>
       )}
