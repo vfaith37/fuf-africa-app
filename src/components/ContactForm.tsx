@@ -8,7 +8,7 @@ const ContactForm: React.FC = () => {
   return (
     <form
       onSubmit={formik.handleSubmit}
-      className="max-w-lg mx-auto p-4 flex flex-col text-[#1D2130]"
+      className="max-w-lg mx-auto p-4 flex flex-col text-[#1D2130] font-Roboto"
     >
       <div className="grid grid-cols-2 gap-4 mb-4">
         <div>

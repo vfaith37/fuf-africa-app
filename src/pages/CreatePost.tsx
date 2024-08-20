@@ -66,7 +66,7 @@ const CreatePost: React.FC<CreatePostProps> = ({ isAuth }) => {
   }, [isAuth, navigate]);
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center font-Roboto">
       <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
         <h1 className="text-2xl font-semibold mb-6 text-center">Create A Post</h1>
         <div className="mb-4">

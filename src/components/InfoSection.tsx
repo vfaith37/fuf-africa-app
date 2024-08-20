@@ -84,7 +84,7 @@ const InfoSection: React.FC = () => {
   }, []);
 
   return (
-    <section className="bg-black text-white px-4 md:px-28 py-16 flex flex-col">
+    <section className="bg-black text-white px-4 md:px-28 py-16 flex flex-col font-Roboto">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Text Content */}
         <div className="flex flex-col justify-center">

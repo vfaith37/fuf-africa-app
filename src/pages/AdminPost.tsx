@@ -7,15 +7,15 @@ interface Post {
   title: string;
   postText: string;
   imageUrl?: string;
-  paragraphs: string[]; // Correctly typed as string[]
+  paragraphs: string[];
   author: {
     id: string;
     name: string;
-    profileImageUrl?: string; // Optional profile image URL
+    profileImageUrl?: string;
   };
   timestamp: {
     seconds: number;
-  }; // Add timestamp for post date
+  };
 }
 
 interface AdminPostProps {
@@ -76,7 +76,7 @@ const AdminPost: React.FC<AdminPostProps> = ({ isAuth }) => {
         return (
           <main
             key={post.id}
-            className="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white text-black antialiased"
+            className="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white text-black antialiased font-Roboto"
           >
             <div className="flex justify-between px-4 mx-auto max-w-screen-xl">
               <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
@@ -95,7 +95,7 @@ const AdminPost: React.FC<AdminPostProps> = ({ isAuth }) => {
                         <a href="#" rel="author" className="text-xl font-bold">
                           @{post.author.name}
                         </a>
-                        <p className="text-base">CEO Fuf-africa</p>
+                        <p className="text-base ">CEO Fuf-africa</p>
                         <p className="text-base">
                           <time
                             dateTime={postDate.toISOString()}
@@ -123,9 +123,9 @@ const AdminPost: React.FC<AdminPostProps> = ({ isAuth }) => {
                       alt="Post image"
                       className="rounded-lg"
                     />
-                    <figcaption className="text-gray-500 dark:text-gray-400 text-sm mt-2">
+                    {/* <figcaption className="text-gray-500 dark:text-gray-400 text-sm mt-2">
                       Digital art by Anonymous
-                    </figcaption>
+                    </figcaption> */}
                   </figure>
                 )}
               </article>

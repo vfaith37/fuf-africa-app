@@ -19,7 +19,7 @@ const Login: React.FC<LoginProps> = ({ setIsAuth }) => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 font-Roboto">
       <p className="text-lg mb-6 text-gray-700">
         Sign In With Google to Continue
       </p>

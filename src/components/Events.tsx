@@ -51,7 +51,7 @@ const Event: React.FC = () => {
   //   console.log(`Day: ${day}, Month: ${month}`); // Output: Day: 20, Month: Aug
 
   return (
-    <div className="bg-gray-100 py-11 px-11">
+    <div className="bg-gray-100 py-11 px-11 font-Roboto">
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold mb-8">Other events</h2>
         <div className="flex flex-col md:flex-row overflow-x-auto space-x-0 md:space-x-4 hide-scrollbar">

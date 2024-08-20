@@ -9,7 +9,7 @@ const Header: React.FC = () => {
     location.pathname === link ? "text-blue-600" : "hover:text-blue-600";
 
   return (
-    <header className="bg-white shadow-md">
+    <header className="bg-white shadow-md font-Roboto">
       <div className="container mx-auto flex justify-between items-center p-4">
         <div className="text-xl font-bold">FUF AFRICA</div>
         <nav className="hidden md:flex space-x-6 flex-grow justify-center">

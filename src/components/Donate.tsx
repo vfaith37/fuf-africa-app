@@ -32,7 +32,7 @@ const Donate: React.FC<DonateProps> = ({ toggleModal, isModalOpen }) => {
   };
 
   return (
-    <div className="Donate">
+    <div className="Donate font-bold">
       {isModalOpen && (
         <Modal>
           <div className="p-6">

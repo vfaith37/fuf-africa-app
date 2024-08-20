@@ -10,7 +10,7 @@ const Home: React.FC = () => {
   return (
     <>
       <Hero />
-      <section className="grid grid-cols-1 md:grid-cols-2 text-black px-5 md:px-10 py-10 md:py-16 gap-8">
+      <section className="grid grid-cols-1 md:grid-cols-2 text-black px-5 md:px-10 py-10 md:py-16 gap-8 font-Roboto">
         <div>
           <div className="flex items-center gap-4">
             <div className="border border-black h-[1px] w-12" />
@@ -41,7 +41,7 @@ const Home: React.FC = () => {
           alt="video"
         />
       </section>
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-24 bg-[#FEF5E7] px-5 md:px-10 py-10 md:py-16">
+      <section className="font-Roboto grid grid-cols-1 md:grid-cols-2 gap-24 bg-[#FEF5E7] px-5 md:px-10 py-10 md:py-16">
         <div className="flex flex-col justify-center order-2 md:order-1">
           <div className="flex items-center gap-2 mb-4">
             <div className="border border-black h-[1px] w-12" />
@@ -112,7 +112,7 @@ const Home: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="hidden md:block order-1 md:order-2 mt-12">
+        <div className="font-Roboto hidden md:block order-1 md:order-2 mt-12">
           <img
             className="w-[480px] h-[658px] object-cover rounded-lg"
             src="https://img.freepik.com/free-photo/pleased-looking-side-young-african-american-male-hat-wearing-green-shirt-isoloated-white-background_141793-138920.jpg?t=st=1723810482~exp=1723814082~hmac=6657cb9e7956a588ed788e50d4cfcfe2a584470e667ea51cbef179f1bfdc2482&w=1380"

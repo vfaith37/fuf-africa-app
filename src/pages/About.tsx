@@ -74,7 +74,7 @@ const About: React.FC = () => {
   }, []);
 
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden font-Roboto">
       <section className="flex flex-col px-3 py-[69px] pb-56 text-[#1D2130]">
         <div className="flex items-center gap-4">
           <div className="border border-black h-[1px] w-12" />

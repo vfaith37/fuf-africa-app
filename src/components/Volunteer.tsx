@@ -16,7 +16,7 @@ const Volunteer: React.FC = () => {
   }, []);
 
   return (
-    <section className="flex flex-col justify-center items-center text-white px-4 h-96 mb-16 my-20 md:my-24">
+    <section className="flex flex-col justify-center items-center text-white px-4 h-96 mb-16 my-20 md:my-24 font-Roboto">
     <div
       className="bg-cover flex flex-col justify-center items-center text-white w-full rounded-lg h-96 px-6"
       style={{

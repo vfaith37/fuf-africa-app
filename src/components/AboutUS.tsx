@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutUs: React.FC = () => {
   return (
-    <div className="bg-[#FFF7E5] py-10 px-6">
+    <div className="bg-[#FFF7E5] py-10 px-6 font-Roboto">
       <section className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center lg:text-left lg:flex lg:justify-between lg:items-start mb-8">

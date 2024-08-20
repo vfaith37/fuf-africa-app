@@ -6,7 +6,7 @@ import ContactForm from "../components/ContactForm";
 const Contact: React.FC = () => {
   return (
     <>
-      <section className=" text-black px-5 py-10 md:py-16 gap-4 md:px-28 bg-[#FCEDC6] flex flex-col">
+      <section className=" text-black px-5 py-10 md:py-16 gap-4 md:px-28 bg-[#FCEDC6] flex flex-col font-Roboto">
         <div className="grid grid-cols-1 md:grid-cols-2 md:gap-24">
           <div>
             <div className="flex items-center gap-4 text-[#1D2130]">
