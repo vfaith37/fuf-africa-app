@@ -14,7 +14,7 @@ const Login: React.FC<LoginProps> = ({ setIsAuth }) => {
     signInWithPopup(auth, provider).then(() => {
       localStorage.setItem("isAuth", "true");
       setIsAuth(true);
-      navigate("/");
+      navigate("/admin");
     });
   };
 
