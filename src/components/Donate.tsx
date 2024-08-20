@@ -48,7 +48,7 @@ const Donate: React.FC<DonateProps> = ({ toggleModal, isModalOpen }) => {
                   console.log(values);
                 }}
               >
-                {({ values, isSubmitting }) => {
+                {({ values }) => {
                   const componentProps = {
                     email: values.email,
                     amount: parseInt(values.amount) * 100,
