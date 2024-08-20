@@ -1,14 +1,11 @@
 // src/pages/Contact.tsx
 import React from "react";
-import Header from "../components/Header";
 import { FaFacebook, FaXTwitter, FaLinkedin } from "react-icons/fa6";
 import ContactForm from "../components/ContactForm";
-import Footer from "../components/Footer";
 
 const Contact: React.FC = () => {
   return (
     <>
-      <Header />
       <section className=" text-black px-5 py-10 md:py-16 gap-4 md:px-28 bg-[#FCEDC6] flex flex-col">
         <div className="grid grid-cols-1 md:grid-cols-2 md:gap-24">
           <div>
@@ -52,7 +49,6 @@ const Contact: React.FC = () => {
         </div>
       </section>
       <ContactForm />
-      <Footer />
     </>
   );
 };

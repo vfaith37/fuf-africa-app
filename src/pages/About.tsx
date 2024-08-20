@@ -1,7 +1,5 @@
 // src/pages/About.tsx
 import React, { useEffect, useState } from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import { FaFacebook, FaXTwitter, FaLinkedin } from "react-icons/fa6";
 import Event from "../components/Events";
 import { fetchImageUrl } from "../utils/storageUtils";
@@ -77,7 +75,6 @@ const About: React.FC = () => {
 
   return (
     <div className="overflow-hidden">
-      <Header />
       <section className="flex flex-col px-3 py-[69px] pb-56 text-[#1D2130]">
         <div className="flex items-center gap-4">
           <div className="border border-black h-[1px] w-12" />
@@ -237,7 +234,6 @@ const About: React.FC = () => {
       </section>
       <Volunteer />
       <Event />
-      <Footer />
     </div>
   );
 };

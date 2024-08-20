@@ -1,12 +1,9 @@
 // src/pages/Media.tsx
 import React from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 
 const Media: React.FC = () => {
   return (
     <>
-      <Header />
       <section className="grid grid-cols-1 md:grid-cols-2 text-black px-5 py-10 md:py-16 gap-4 md:px-28 bg-[#FCEDC6]">
         <div>
           <div className="flex items-center gap-4 text-[#1D2130]">
@@ -82,7 +79,6 @@ const Media: React.FC = () => {
           </div>
         </div>
       </section>
-      <Footer />
     </>
   );
 };

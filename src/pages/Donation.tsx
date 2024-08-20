@@ -1,13 +1,17 @@
 // src/pages/Donation.tsx
-import React from "react";
-import Header from "../components/Header";
+import React, { useState } from "react";
 import MenuComponent from "../components/MenuComponent";
-import Footer from "../components/Footer";
+import Donate from "../components/Donate"; // Import the Donate component
 
 const Donation: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
+
   return (
     <>
-      <Header />
       <section className="grid grid-cols-1 md:grid-cols-2 text-black px-5 py-10 md:py-16 gap-4 md:px-28 bg-[#FCEDC6]">
         <div>
           <div className="flex items-center gap-4 text-[#1D2130]">
@@ -22,7 +26,10 @@ const Donation: React.FC = () => {
               When you donate, you’re supporting effective care to children with
               special needs—an investment in the leaders of tomorrow.
             </p>
-            <button className="bg-[#F2C94C] px-8 py-4 rounded-sm font-medium">
+            <button
+              onClick={toggleModal} // Trigger the modal on button click
+              className="bg-[#F2C94C] px-8 py-4 rounded-sm font-medium"
+            >
               Donate now
             </button>
           </div>
@@ -33,6 +40,8 @@ const Donation: React.FC = () => {
           className="rounded-xl object-cover w-[480px] h-[384px]"
         />
       </section>
+      <Donate toggleModal={toggleModal} isModalOpen={isModalOpen} />{" "}
+      {/* Include the Donate component */}
       <MenuComponent />
       <div className="border w-[90%] mx-6 md:mx-20 bg-[#E5E5E5]" />
       <div className="container w-full py-16 px-6 md:py-24 md:px-20 gap-2 flex flex-col md:flex-row">
@@ -51,7 +60,6 @@ const Donation: React.FC = () => {
           cursus id rutrum lorem imperdiet.
         </p>
       </div>
-      <Footer />
     </>
   );
 };

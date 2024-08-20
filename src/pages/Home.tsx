@@ -1,9 +1,7 @@
 // src/pages/Home.tsx
 import React from "react";
-import Header from "../components/Header";
 import Hero from "../components/Hero";
 import InfoSection from "../components/InfoSection";
-import Footer from "../components/Footer";
 import { FaDog } from "react-icons/fa6";
 import Volunteer from "../components/Volunteer";
 import Event from "../components/Events";
@@ -11,7 +9,6 @@ import Event from "../components/Events";
 const Home: React.FC = () => {
   return (
     <>
-      <Header />
       <Hero />
       <section className="grid grid-cols-1 md:grid-cols-2 text-black px-5 md:px-10 py-10 md:py-16 gap-8">
         <div>
@@ -126,7 +123,6 @@ const Home: React.FC = () => {
       <InfoSection />
       <Volunteer />
       <Event />
-      <Footer />
     </>
   );
 };
