@@ -78,14 +78,14 @@ const Header: React.FC = () => {
           >
             Contact
           </Link>
+          <Link to="/blog" className={`block py-2 $linkClasses("/blog")`}>
+            Blog
+          </Link>
           <Link
             to="/donate"
             className="block py-2 mt-2 bg-gray-900 text-white text-center rounded hover:bg-gray-800"
           >
             Donate
-          </Link>
-          <Link to="/blog" className={linkClasses("/blog")}>
-            Blog
           </Link>
         </div>
       )}

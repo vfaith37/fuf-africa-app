@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Home from "./pages/Home";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
 import About from "./pages/About";
 import WhatWeDo from "./pages/WhatWeDo";
 import Media from "./pages/Media";
@@ -15,10 +15,7 @@ import Login from "./pages/Login";
 import AdminPost from "./pages/AdminPost";
 
 const App: React.FC = () => {
-  // const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
-  const [isAuth, setIsAuth] = useState<boolean>(
-    !!localStorage.getItem("isAuth")
-  );
+  const [isAuth, setIsAuth] = useState<boolean>(!!localStorage.getItem("isAuth"));
 
   const signUserOut = () => {
     signOut(auth).then(() => {
@@ -30,7 +27,6 @@ const App: React.FC = () => {
 
   return (
     <Router>
-      {/* <Header /> */}
       <Routes>
         <Route path="/" element={<AppLayout />}>
           <Route index element={<Home />} />
@@ -47,7 +43,6 @@ const App: React.FC = () => {
           <Route path="post" element={<AdminPost isAuth={isAuth} />} />
         </Route>
       </Routes>
-      {/* <Footer /> */}
     </Router>
   );
 };
