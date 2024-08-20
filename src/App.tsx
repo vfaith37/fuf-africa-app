@@ -9,21 +9,21 @@ import Donation from "./pages/Donation";
 import Blog from "./pages/Blog";
 import AppLayout from "./components/shared/AppLayout";
 import CreatePost from "./pages/CreatePost";
-import { signOut } from "firebase/auth";
-import { auth } from "./config/firebase";
+// import { signOut } from "firebase/auth";
+// import { auth } from "./config/firebase";
 import Login from "./pages/Login";
 import AdminPost from "./pages/AdminPost";
 
 const App: React.FC = () => {
   const [isAuth, setIsAuth] = useState<boolean>(!!localStorage.getItem("isAuth"));
 
-  const signUserOut = () => {
-    signOut(auth).then(() => {
-      localStorage.clear();
-      setIsAuth(false);
-      window.location.pathname = "/login";
-    });
-  };
+  // const signUserOut = () => {
+  //   signOut(auth).then(() => {
+  //     localStorage.clear();
+  //     setIsAuth(false);
+  //     window.location.pathname = "/login";
+  //   });
+  // };
 
   return (
     <Router>
