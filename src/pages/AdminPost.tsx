@@ -85,10 +85,7 @@ const AdminPost: React.FC<AdminPostProps> = ({ isAuth }) => {
                     <div className="inline-flex items-center mr-3 text-sm">
                       <img
                         className="mr-4 w-16 h-16 rounded-full"
-                        src={
-                          post.author.profileImageUrl ||
-                          "https://flowbite.com/docs/images/people/profile-picture-2.jpg"
-                        }
+                        src={post.author.profileImageUrl}
                         alt={post.author.name}
                       />
                       <div>

@@ -74,37 +74,41 @@ const About: React.FC = () => {
   }, []);
 
   return (
-    <div className="overflow-hidden font-Roboto">
-      <section className="flex flex-col px-3 py-[69px] pb-56 text-[#1D2130]">
-        <div className="flex items-center gap-4">
-          <div className="border border-black h-[1px] w-12" />
-          <p className="text-base font-bold">KNOW ABOUT US</p>
-        </div>
-        <div className="pt-8 px-[75px]">
-          <h1 className="font-bold text-4xl mb-5">
-            We are a non-governmental organization
-          </h1>
-          <p className="font-bold text-xl mb-9">
-            Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc
-            ut sem vitae risus tristique posuere.
-          </p>
-          <p className="font-normal text-base">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            varius enim in eros elementum tristique. Duis cursus, mi quis
-            viverra ornare, eros dolor interdum nulla, ut commodo diam libero
-            vitae erat. Suspendisse varius enim elementum tristique.
-          </p>
+    <div className="relative overflow-hidden font-Roboto">
+      {/* Know about us Section */}
+      <section className="flex flex-col text-[#1D2130] pb-[172px] space-y-5">
+        <div>
+          <div className="flex items-center gap-4 mt-8 mb-4 mx-5">
+            <div className="border border-black h-[1px] md:w-8 w-6" />
+            <p className="text-base font-bold">KNOW ABOUT US</p>
+          </div>
+          <div className="space-y-8 mx-20 pb-10">
+            <h1 className="font-bold text-4xl">
+              We are a non-governmental organization
+            </h1>
+            <p className="font-bold text-xl">
+              Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.
+              Nunc ut sem vitae risus tristique posuere.
+            </p>
+            <p className="font-normal text-base">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim in eros elementum tristique. Duis cursus,
+              mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
+              libero vitae erat. Suspendisse varius enim elementum tristique.
+            </p>
+          </div>
         </div>
       </section>
 
-      <div className="absolute top-[550px] md:top-[400px] rounded-2xl px-28 h-auto w-full">
+      {/* Video about us */}
+      <div className="w-full h-[386px] mt-[-172px]">
         <img
           src="https://img.freepik.com/free-photo/pleased-looking-side-young-african-american-male-hat-wearing-green-shirt-isoloated-white-background_141793-138920.jpg?t=st=1723810482~exp=1723814082~hmac=6657cb9e7956a588ed788e50d4cfcfe2a584470e667ea51cbef179f1bfdc2482&w=1380"
           alt="NGO group"
-          className="rounded-lg w-full h-96 object-cover"
+          className="rounded-lg mx-auto w-4/5 h-96 object-cover"
         />
         <button
-          className="absolute inset-0 flex items-center justify-center"
+          className="relative top-[-252px] mx-auto inset-0 flex items-center justify-center"
           aria-label="Play Video"
         >
           <div className="bg-white p-4 rounded-full">
@@ -123,36 +127,41 @@ const About: React.FC = () => {
         </button>
       </div>
 
-      <section className="text-[#1D2130] bg-[#FCEDC6] pt-56 py-14 px-11 pb-16">
-        <div className="mb-16">
-          <h1 className="font-bold text-base mb-4">Our Mission</h1>
-          <h1 className="font-bold text-2xl">
-            We make sure to provide inclusive care for children with special
-            needs
-          </h1>
-          <p className="text-base font-normal mb-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            varius enim in eros elementum tristique. Duis cursus, mi quis
-            viverra ornare, eros dolor interdum nulla, ut commodo diam libero
-            vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem
-            imperdiet. Nunc ut sem vitae risus tristique posuere.
-          </p>
-        </div>
-        <div>
-          <h1 className="font-bold text-base mb-4">Our Vision</h1>
-          <h1 className="font-bold text-2xl mb-2">
-            We make sure to provide inclusive care for children with special
-            needs
-          </h1>
-          <p className="text-base font-normal">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            varius enim in eros elementum tristique. Duis cursus, mi quis
-            viverra ornare, eros dolor interdum nulla, ut commodo diam libero
-            vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem
-            imperdiet. Nunc ut sem vitae risus tristique posuere.
-          </p>
+      {/* Our Vision and our Mission */}
+      <section className="text-[#1D2130] bg-[#FCEDC6] space-y-10 pt-[172px] mt-[-172px]">
+        <div className="pb-5 mx-20">
+          <div className="mx-5 mt-5 space-y-2 pt-10">
+            <h1 className="font-bold text-base">Our Mission</h1>
+            <h1 className="font-bold text-2xl">
+              We make sure to provide inclusive care for children with special
+              needs
+            </h1>
+            <p className="text-base font-normal">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim in eros elementum tristique. Duis cursus,
+              mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
+              libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum
+              lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
+            </p>
+          </div>
+          <div className="space-y-2 mx-5 mt-10">
+            <h1 className="font-bold text-base">Our Vision</h1>
+            <h1 className="font-bold text-2xl">
+              We make sure to provide inclusive care for children with special
+              needs
+            </h1>
+            <p className="text-base font-normal">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim in eros elementum tristique. Duis cursus,
+              mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
+              libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum
+              lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
+            </p>
+          </div>
         </div>
       </section>
+
+      {/* Our Journey Section */}
       <section className="py-11 px-6 md:px-11 mb-16 text-[#1D2130]">
         <div className="bg-[#F2C94C] rounded-lg px-12 py-14 flex flex-col lg:gap-10 lg:flex-row">
           <div>
