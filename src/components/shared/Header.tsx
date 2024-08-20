@@ -1,72 +1,61 @@
 import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const Header: React.FC = () => {
-  const [activeLink, setActiveLink] = useState("/");
+  const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleLinkClick = (link: string) => {
-    console.log("agh", link);
-    setActiveLink(link);
-  };
-
-
   const linkClasses = (link: string) =>
-    activeLink === link ? "text-blue-600" : "hover:text-blue-600";
+    location.pathname === link ? "text-blue-600" : "hover:text-blue-600";
 
   return (
     <header className="bg-white shadow-md">
       <div className="container mx-auto flex justify-between items-center p-4">
         <div className="text-xl font-bold">FUF AFRICA</div>
         <nav className="hidden md:flex space-x-6 flex-grow justify-center">
-          <a
-            href="/"
+          <Link
+            to="/"
             className={linkClasses("/")}
-            onClick={() => handleLinkClick("/")}
           >
             Home
-          </a>
-          <a
-            href="/about"
+          </Link>
+          <Link
+            to="/about"
             className={linkClasses("/about")}
-            onClick={() => handleLinkClick("/about")}
           >
             About Us
-          </a>
-          <a
-            href="/what-we-do"
+          </Link>
+          <Link
+            to="/what-we-do"
             className={linkClasses("/what-we-do")}
-            onClick={() => handleLinkClick("/what-we-do")}
           >
             What We Do
-          </a>
-          <a
-            href="/media"
+          </Link>
+          <Link
+            to="/media"
             className={linkClasses("/media")}
-            onClick={() => handleLinkClick("/media")}
           >
             Media
-          </a>
-          <a
-            href="/contact"
+          </Link>
+          <Link
+            to="/contact"
             className={linkClasses("/contact")}
-            onClick={() => handleLinkClick("/contact")}
           >
             Contact
-          </a>
-          <a
-            href="/blog"
+          </Link>
+          <Link
+            to="/blog"
             className={linkClasses("/blog")}
-            onClick={() => handleLinkClick("/blog")}
           >
             Blog
-          </a>
+          </Link>
         </nav>
-        <a
-          href="/donate"
+        <Link
+          to="/donate"
           className="hidden md:inline-block bg-gray-900 text-white px-4 py-2 rounded hover:bg-gray-800"
         >
           Donate
-        </a>
+        </Link>
         <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
           <svg
             className="w-6 h-6"
@@ -86,47 +75,42 @@ const Header: React.FC = () => {
       </div>
       {isOpen && (
         <div className="md:hidden bg-white shadow-md p-4">
-          <a
-            href="/"
+          <Link
+            to="/"
             className={`block py-2 ${linkClasses("/")}`}
-            onClick={() => handleLinkClick("/")}
           >
             Home
-          </a>
-          <a
-            href="/about"
+          </Link>
+          <Link
+            to="/about"
             className={`block py-2 ${linkClasses("/about")}`}
-            onClick={() => handleLinkClick("/about")}
           >
             About Us
-          </a>
-          <a
-            href="/what-we-do"
+          </Link>
+          <Link
+            to="/what-we-do"
             className={`block py-2 ${linkClasses("/what-we-do")}`}
-            onClick={() => handleLinkClick("/what-we-do")}
           >
             What We Do
-          </a>
-          <a
-            href="/media"
+          </Link>
+          <Link
+            to="/media"
             className={`block py-2 ${linkClasses("/media")}`}
-            onClick={() => handleLinkClick("/media")}
           >
             Media
-          </a>
-          <a
-            href="/contact"
+          </Link>
+          <Link
+            to="/contact"
             className={`block py-2 ${linkClasses("/contact")}`}
-            onClick={() => handleLinkClick("/contact")}
           >
             Contact
-          </a>
-          <a
-            href="/donate"
+          </Link>
+          <Link
+            to="/donate"
             className="block py-2 mt-2 bg-gray-900 text-white text-center rounded hover:bg-gray-800"
           >
             Donate
-          </a>
+          </Link>
         </div>
       )}
     </header>
