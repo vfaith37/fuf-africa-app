@@ -29,7 +29,7 @@ const CreatePost: React.FC<CreatePostProps> = ({ isAuth }) => {
 
   useEffect(() => {
     if (!isAuth) {
-      navigate("/login");
+      navigate("/admin/login");
     }
   }, [isAuth, navigate]);
 
