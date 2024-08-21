@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { addDoc, collection, Timestamp } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
-import { db, auth, storage } from "../config/firebase"; // Import storage
+import { db, auth, storage } from "../../config/firebase"; // Import storage
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
 interface CreatePostProps {
@@ -15,6 +15,21 @@ const CreatePost: React.FC<CreatePostProps> = ({ isAuth }) => {
 
   const postsCollectionRef = collection(db, "posts");
   const navigate = useNavigate();
+  const [userData, setUserData] = useState<any>(null);
+
+  useEffect(() => {
+    // Retrieve user data from localStorage
+    const storedUserData = localStorage.getItem("userData");
+
+    if (storedUserData) {
+      // Parse the JSON string back into an object
+      const parsedUserData = JSON.parse(storedUserData);
+      setUserData(parsedUserData);
+    } else {
+      // If no user data is found, redirect to login
+      navigate("/login");
+    }
+  }, [navigate]);
 
   const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.files && event.target.files[0]) {
@@ -38,7 +53,7 @@ const CreatePost: React.FC<CreatePostProps> = ({ isAuth }) => {
 
   const createPost = async () => {
     let imageUrl = "";
-    
+
     if (image) {
       const imageRef = ref(storage, `images/${image.name}`);
       await uploadBytes(imageRef, image);
@@ -50,8 +65,10 @@ const CreatePost: React.FC<CreatePostProps> = ({ isAuth }) => {
       paragraphs, // Save the paragraphs
       imageUrl, // Save the image URL
       author: {
-        name: auth.currentUser?.displayName || "",
-        id: auth.currentUser?.uid || "",
+        name: auth.currentUser?.displayName || "Jane Doe",
+        profileImageUrl: auth.currentUser?.photoURL || "Jane Doe",
+        id: auth.currentUser?.uid || "12345678987654323",
+        position: userData.position,
       },
       timestamp: Timestamp.now(),
     });
@@ -64,13 +81,18 @@ const CreatePost: React.FC<CreatePostProps> = ({ isAuth }) => {
       navigate("/admin/login");
     }
   }, [isAuth, navigate]);
+  console.log(auth);
 
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center font-Roboto">
       <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
-        <h1 className="text-2xl font-semibold mb-6 text-center">Create A Post</h1>
+        <h1 className="text-2xl font-semibold mb-6 text-center">
+          Create A Post
+        </h1>
         <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-700 mb-1">Title:</label>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Title:
+          </label>
           <input
             type="text"
             placeholder="Title..."
@@ -80,13 +102,17 @@ const CreatePost: React.FC<CreatePostProps> = ({ isAuth }) => {
           />
         </div>
         <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-700 mb-1">Post:</label>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Post:
+          </label>
           {paragraphs.map((paragraph, index) => (
             <div key={index} className="mb-2">
               <textarea
                 placeholder={`Paragraph ${index + 1}...`}
                 value={paragraph}
-                onChange={(event) => handleParagraphChange(index, event.target.value)}
+                onChange={(event) =>
+                  handleParagraphChange(index, event.target.value)
+                }
                 className="w-full p-2 border border-gray-300 rounded-md"
                 rows={4}
               />
@@ -108,7 +134,9 @@ const CreatePost: React.FC<CreatePostProps> = ({ isAuth }) => {
           </button>
         </div>
         <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-700 mb-1">Image:</label>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Image:
+          </label>
           <input
             type="file"
             onChange={handleImageChange}

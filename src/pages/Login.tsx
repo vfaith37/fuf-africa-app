@@ -1,13 +1,15 @@
 import React, { useState } from "react";
-import { auth } from "../config/firebase";
+import { auth, db } from "../config/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
+import { doc, getDoc } from "firebase/firestore";
 
 interface LoginProps {
   setIsAuth: (value: boolean) => void;
+  setIsAdmin: (value: boolean) => void;
 }
 
-const Login: React.FC<LoginProps> = ({ setIsAuth }) => {
+const Login: React.FC<LoginProps> = ({ setIsAuth, setIsAdmin }) => {
   const navigate = useNavigate();
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
@@ -16,9 +18,14 @@ const Login: React.FC<LoginProps> = ({ setIsAuth }) => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in successfully
+        if (email === "vfaith37@gmail.com") {
+          localStorage.setItem("isAdmin", "true");
+          setIsAdmin(true);
+        }
         const user = userCredential.user;
         console.log("User signed in:", user);
         localStorage.setItem("isAuth", "true");
+        fetchUserData();
         navigate("/admin");
         setIsAuth(true); // Update auth state
       })
@@ -27,6 +34,36 @@ const Login: React.FC<LoginProps> = ({ setIsAuth }) => {
         const errorMessage = error.message;
         console.error("Error signing in:", errorCode, errorMessage);
       });
+  };
+  const fetchUserData = async () => {
+    // Ensure the user is authenticated
+    const currentUser = auth.currentUser;
+
+    if (currentUser) {
+      const uid = currentUser.uid;
+
+      try {
+        // Get the document reference for the current user
+        const userDocRef = doc(db, "users", uid);
+
+        // Fetch the document data
+        const userDoc = await getDoc(userDocRef);
+
+        if (userDoc.exists()) {
+          // Access the data
+          const userData = userDoc.data();
+          console.log("User Data:", userData);
+          localStorage.setItem("userData", JSON.stringify(userData));
+        //   return userData; // You can return or use this data as needed
+        } else {
+          console.log("No user data found for the current user.");
+        }
+      } catch (error) {
+        console.error("Error fetching user data:", error);
+      }
+    } else {
+      console.log("No user is currently authenticated.");
+    }
   };
 
   return (

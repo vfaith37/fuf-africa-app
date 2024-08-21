@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getDocs, collection, deleteDoc, doc } from "firebase/firestore";
-import { db, auth } from "../config/firebase";
+import { db, auth } from "../../config/firebase";
 
 interface Post {
   id: string;
@@ -11,6 +11,7 @@ interface Post {
   author: {
     id: string;
     name: string;
+    position: string;
     profileImageUrl?: string;
   };
   timestamp: {
@@ -42,6 +43,7 @@ const AdminPost: React.FC<AdminPostProps> = ({ isAuth }) => {
               author: {
                 id: data.author.id,
                 name: data.author.name,
+                position: data.author.position,
                 profileImageUrl: data.author.profileImageUrl, // Optional
               },
               timestamp: data.timestamp || { seconds: 0 }, // Default to empty timestamp if undefined
@@ -76,7 +78,7 @@ const AdminPost: React.FC<AdminPostProps> = ({ isAuth }) => {
         return (
           <main
             key={post.id}
-            className="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white text-black antialiased font-Roboto"
+            className="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white text-black antialiased font-Roboto flex-col flex"
           >
             <div className="flex justify-between px-4 mx-auto max-w-screen-xl">
               <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
@@ -92,7 +94,7 @@ const AdminPost: React.FC<AdminPostProps> = ({ isAuth }) => {
                         <a href="#" rel="author" className="text-xl font-bold">
                           @{post.author.name}
                         </a>
-                        <p className="text-base ">CEO Fuf-africa</p>
+                        <p className="text-base ">{post.author.position}</p>
                         <p className="text-base">
                           <time
                             dateTime={postDate.toISOString()}
@@ -104,35 +106,36 @@ const AdminPost: React.FC<AdminPostProps> = ({ isAuth }) => {
                       </div>
                     </div>
                   </address>
+
                   <h1 className="mb-4 text-3xl font-extrabold leading-tight lg:mb-6 lg:text-4xl">
                     {post.title}
                   </h1>
+                  {post.imageUrl && (
+                    <figure>
+                      <img
+                        src={post.imageUrl}
+                        alt="Post image"
+                        className="rounded-lg"
+                      />
+                      {/* <figcaption className="text-gray-500 dark:text-gray-400 text-sm mt-2">
+                      Digital art by Anonymous
+                    </figcaption> */}
+                    </figure>
+                  )}
                 </header>
                 {post.paragraphs.map((para, index) => (
                   <p key={index} className="lead mb-3">
                     {para}
                   </p>
                 ))}
-                {post.imageUrl && (
-                  <figure>
-                    <img
-                      src={post.imageUrl}
-                      alt="Post image"
-                      className="rounded-lg"
-                    />
-                    {/* <figcaption className="text-gray-500 dark:text-gray-400 text-sm mt-2">
-                      Digital art by Anonymous
-                    </figcaption> */}
-                  </figure>
-                )}
               </article>
             </div>
             {isAuth && post.author.id === auth.currentUser?.uid && (
               <button
                 onClick={() => deletePost(post.id)}
-                className="text-red-500 hover:text-red-700"
+                className="bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600 transition-colors self-center"
               >
-                &#128465;
+                Delete
               </button>
             )}
           </main>
