@@ -1,17 +1,42 @@
-import React, { useState } from "react";
+import { getDownloadURL, ref } from "firebase/storage";
+import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { storage } from "../../config/firebase";
 
 const Header: React.FC = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
+  const [imageUrl, setImageUrl] = useState<string>("");
 
+  useEffect(() => {
+    const fetchImage = async () => {
+      try {
+        const storageRef = ref(
+          storage,
+          "430967010_816809673600509_6241911341346948533_n.png"
+        );
+        const url = await getDownloadURL(storageRef);
+        setImageUrl(url);
+      } catch (error) {
+        console.error("Error fetching image: ", error);
+      }
+    };
+
+    fetchImage();
+  }, []);
   const linkClasses = (link: string) =>
     location.pathname === link ? "text-blue-600" : "hover:text-blue-600";
 
   return (
     <header className="bg-white shadow-md font-Roboto">
-      <div className="container mx-auto flex justify-between items-center p-4">
-        <div className="text-xl font-bold">FUF AFRICA</div>
+      <div className="container mx-auto flex justify-between items-center px-4">
+        <div className="text-xl font-bold">
+          <img
+            src={imageUrl}
+            alt="fuf-africa"
+            className="h-16 w-32 left-5 object-cover"
+          />
+        </div>
         <nav className="hidden md:flex space-x-6 flex-grow justify-center">
           <Link to="/" className={linkClasses("/")}>
             Home
