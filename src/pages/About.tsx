@@ -212,13 +212,13 @@ const About: React.FC = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
           varius enim in eros elementum tristique.
         </p>
-        <div className="sm:grid sm:grid-cols-2 md:grid-cols-4 sm:gap-8 space-y-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {teamMembers.map((member, index) => (
             <div key={index} className="text-center md:self-end">
               <img
                 src={member.imageUrl}
                 alt={member.name}
-                className="rounded-lg h-80 w-72 mx-auto mb-4 object-cover"
+                className="rounded-lg h-48 md:h-80 w-72 mx-auto mb-4 object-cover"
               />
               <h3 className="text-xl font-semibold">{member.name}</h3>
               <p className="text-gray-600">{member.position}</p>
