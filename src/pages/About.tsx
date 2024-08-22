@@ -1,5 +1,5 @@
 // src/pages/About.tsx
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FaFacebook, FaXTwitter, FaLinkedin } from "react-icons/fa6";
 import Event from "../components/Events";
 import { fetchImageUrl } from "../utils/storageUtils";
@@ -54,6 +54,7 @@ const About: React.FC = () => {
     useState<TeamMember[]>(initialTeamMembers);
   const [sectionBackgroundImageUrl, setSectionBackgroundImageUrl] =
     useState<string>("");
+  const iframeRef = useRef<HTMLIFrameElement>(null);
 
   useEffect(() => {
     const loadImages = async () => {
@@ -73,6 +74,27 @@ const About: React.FC = () => {
     loadImages();
   }, []);
 
+  useEffect(() => {
+    const handleFocus = () => {
+      if (iframeRef.current) {
+        iframeRef.current.contentWindow?.postMessage(
+          '{"event":"command","func":"playVideo","args":""}',
+          "*"
+        );
+      }
+    };
+
+    const section = iframeRef.current?.parentNode;
+    if (section) {
+      section.addEventListener("focus", handleFocus);
+    }
+
+    return () => {
+      if (section) {
+        section.removeEventListener("focus", handleFocus);
+      }
+    };
+  }, [iframeRef]);
   return (
     <div className="relative overflow-hidden font-Roboto">
       {/* Know about us Section */}
@@ -102,29 +124,15 @@ const About: React.FC = () => {
 
       {/* Video about us */}
       <div className="w-full h-[386px] mt-[-172px]">
-        <img
-          src="https://img.freepik.com/free-photo/pleased-looking-side-young-african-american-male-hat-wearing-green-shirt-isoloated-white-background_141793-138920.jpg?t=st=1723810482~exp=1723814082~hmac=6657cb9e7956a588ed788e50d4cfcfe2a584470e667ea51cbef179f1bfdc2482&w=1380"
-          alt="NGO group"
+        <iframe
+          // ref={iframeRef}
           className="rounded-lg mx-auto w-4/5 h-96 object-cover"
-        />
-        <button
-          className="relative top-[-252px] mx-auto inset-0 flex items-center justify-center"
-          aria-label="Play Video"
-        >
-          <div className="bg-white p-4 rounded-full">
-            <svg
-              className="w-12 h-12 text-gray-800"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path
-                fillRule="evenodd"
-                d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1.72-9.78a.75.75 0 011.16-.64l4.5 2.25a.75.75 0 010 1.28l-4.5 2.25a.75.75 0 01-1.16-.64v-4.5z"
-                clipRule="evenodd"
-              />
-            </svg>
-          </div>
-        </button>
+          src="https://www.youtube.com/embed/8one9yUgXMs"
+          title="YouTube video"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
       </div>
 
       {/* Our Vision and our Mission */}
