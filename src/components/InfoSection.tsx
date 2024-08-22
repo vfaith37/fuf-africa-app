@@ -84,8 +84,8 @@ const InfoSection: React.FC = () => {
   }, []);
 
   return (
-    <section className="bg-black text-white px-4 md:px-28 py-16 flex flex-col font-Roboto">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+    <section className="bg-black text-white px-4 md:px-16 py-16 flex flex-col">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Text Content */}
         <div className="flex flex-col justify-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
@@ -102,11 +102,11 @@ const InfoSection: React.FC = () => {
         </div>
 
         {/* Doughnut Chart */}
-        <div className="items-center hidden md:block">
+        <div className="items-center hidden md:flex md:justify-end">
           <Doughnut id="doughnut-chart" data={data} options={options} />
         </div>
       </div>
-      <div className="flex-col self-center h-auto w-96 block md:hidden bg-black">
+      <div className="flex-col self-center h-auto w-80 md:w-96 block md:hidden bg-black">
         <Doughnut id="doughnut-chart" data={data} options={options} />
         {/* Custom Legend for Mobile */}
         <div className="block md:hidden ">
@@ -114,6 +114,7 @@ const InfoSection: React.FC = () => {
         </div>
       </div>
     </section>
+
   );
 };
 

@@ -51,7 +51,7 @@ const Event: React.FC = () => {
   //   console.log(`Day: ${day}, Month: ${month}`); // Output: Day: 20, Month: Aug
 
   return (
-    <div className="bg-gray-100 py-11 px-11 font-Roboto">
+    <div className="bg-gray-100 p-11">
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold mb-8">Other events</h2>
         <div className="flex flex-col md:flex-row overflow-x-auto space-x-0 md:space-x-4 hide-scrollbar">
@@ -60,21 +60,21 @@ const Event: React.FC = () => {
             return (
               <div
                 key={index}
-                className="bg-[#F2C94C] w-full p-6 rounded-xl mb-4 md:mb-0 flex gap-4"
+                className="bg-[#F2C94C] w-full p-5 rounded-xl mb-4 md:mb-0 flex gap-4"
               >
                 <div>
                   <p className="font-medium text-4xl">{day}</p>
                   <p className="font-medium text-base">{month}</p>
                 </div>
-                <div className="">
+                <div className="space-y-1">
                   <div>
                     <div className="flex gap-16 items-center">
                       <p className="font-medium text-base">NEXT</p>
-                      <div className="border border-black h-[1px] w-7" />
+                      <div className="border border-black h-[1px] w-6" />
                     </div>
                     <p className="font-medium text-base">EVENTS</p>
                   </div>
-                  <h3 className="text-2xl font-bold">{event.title}</h3>
+                  <h3 className="text-xl font-bold">{event.title}</h3>
                 </div>
                 {/* <div className="bg-white h-12 w-12 justify-center flex items-center rounded-full absolute right-14 mt-5">
                   <FaArrowRight className="text-black" />

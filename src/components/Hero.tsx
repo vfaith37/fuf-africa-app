@@ -17,12 +17,12 @@ const Hero: React.FC = () => {
 
   return (
     <section
-      className="bg-cover bg-center h-screen flex flex-col justify-center items-center text-white font-Roboto"
+      className="bg-cover bg-center h-screen flex flex-col justify-center items-center text-white"
       style={{
         backgroundImage: `url(${backgroundImageUrl})`,
       }}
     >
-      <h1 className="text-4xl md:text-6xl font-bold">
+      <h1 className="text-4xl mx-7 text-center md:text-6xl font-bold">
         We Spread Compassion, We Create Smiles
       </h1>
       <div className="mt-8 space-x-4">

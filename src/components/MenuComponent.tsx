@@ -14,7 +14,7 @@ const MenuComponent: React.FC = () => {
   ];
 
   return (
-    <div className="container mx-auto py-16 px-6 md:py-24 md:px-20 gap-5 flex flex-col md:flex-row font-Roboto">
+    <div className="container mx-auto py-16 px-6 md:py-10 md:px-12 gap-5 flex flex-col md:flex-row font-Roboto">
       <div className=" w-full md:w-1/2">
         <h2 className="text-3xl font-bold mb-4">
           How you can contribute to caring for our kids

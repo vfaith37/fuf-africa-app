@@ -104,7 +104,7 @@ const About: React.FC = () => {
             <div className="border border-black h-[1px] md:w-8 w-6" />
             <p className="text-base font-bold">KNOW ABOUT US</p>
           </div>
-          <div className="space-y-8 mx-20 pb-10">
+          <div className="space-y-8 mx-10 md:mx-20 pb-10">
             <h1 className="font-bold text-4xl">
               We are a non-governmental organization
             </h1>
@@ -137,7 +137,7 @@ const About: React.FC = () => {
 
       {/* Our Vision and our Mission */}
       <section className="text-[#1D2130] bg-[#FCEDC6] space-y-10 pt-[172px] mt-[-172px]">
-        <div className="pb-5 mx-20">
+        <div className="pb-5 mx-5 md:mx-20">
           <div className="mx-5 mt-5 space-y-2 pt-10">
             <h1 className="font-bold text-base">Our Mission</h1>
             <h1 className="font-bold text-2xl">
@@ -170,7 +170,7 @@ const About: React.FC = () => {
       </section>
 
       {/* Our Journey Section */}
-      <section className="py-11 px-6 md:px-11 mb-16 text-[#1D2130]">
+      <section className="px-2 md:px-11 mb-16 text-[#1D2130] mt-10 md:mt-20">
         <div className="bg-[#F2C94C] rounded-lg px-12 py-14 flex flex-col lg:gap-10 lg:flex-row">
           <div>
             <h1 className="font-bold text-base">OUR</h1>
@@ -212,9 +212,9 @@ const About: React.FC = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
           varius enim in eros elementum tristique.
         </p>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="sm:grid sm:grid-cols-2 md:grid-cols-4 sm:gap-8 space-y-8">
           {teamMembers.map((member, index) => (
-            <div key={index} className="text-center">
+            <div key={index} className="text-center md:self-end">
               <img
                 src={member.imageUrl}
                 alt={member.name}

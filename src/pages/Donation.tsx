@@ -12,13 +12,13 @@ const Donation: React.FC = () => {
 
   return (
     <>
-      <section className="grid grid-cols-1 md:grid-cols-2 text-black px-5 py-10 md:py-16 gap-4 md:px-28 bg-[#FCEDC6] font-Roboto">
+      <section className="grid grid-cols-1 md:grid-cols-2 text-black px-5 py-10 md:py-16 gap-4 md:px-7 bg-[#FCEDC6] font-Roboto">
         <div>
           <div className="flex items-center gap-4 text-[#1D2130]">
-            <div className="border border-black h-[1px] w-12" />
+            <div className="border border-black h-[1px] w-8" />
             <p className="text-sm md:text-base font-bold">DONATE</p>
           </div>
-          <div className="pt-6 md:pt-8 px-2 md:px-[64px]">
+          <div className="pt-6 md:pt-8 px-2">
             <h1 className="font-bold text-2xl md:text-5xl mb-4 md:mb-12">
               Making a donation for our children.
             </h1>
@@ -44,22 +44,22 @@ const Donation: React.FC = () => {
       {/* Include the Donate component */}
       <MenuComponent />
       <div className="border w-[90%] mx-6 md:mx-20 bg-[#E5E5E5]" />
-      <div className="container w-full py-16 px-6 md:py-24 md:px-20 gap-2 flex flex-col md:flex-row">
+      <div className="container w-full py-16 px-6 md:py-12 md:px-10 gap-2 flex flex-col md:flex-ro">
         <h2 className="text-3xl font-bold mb-4 md:w-1/3">
           How we use your donations
         </h2>
-        <p className="text-lg text-gray-700 mb-6 md:w-1/3">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          varius enim in eros elementum tristique. Duis cursus, mi quis viverra
-          ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
-          Nunc ut sem vitae risus tristique posuere.
-        </p>
-        <p className="text-lg text-gray-700 mb-6 md:w-1/3">
-          Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc
-          ut sem vitae risus tristique posuere. Aenean faucibus nibh et justo
-          cursus id rutrum lorem imperdiet.
-        </p>
-      </div>
+          <p className="text-lg text-gray-700 mb-6">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            varius enim in eros elementum tristique. Duis cursus, mi quis
+            viverra ornare, eros dolor interdum nulla, ut commodo diam libero
+            vitae erat. Nunc ut sem vitae risus tristique posuere.
+          </p>
+          <p className="text-lg text-gray-700 mb-6">
+            Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc
+            ut sem vitae risus tristique posuere. Aenean faucibus nibh et justo
+            cursus id rutrum lorem imperdiet.
+          </p>
+        </div>
     </>
   );
 };

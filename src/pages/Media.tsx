@@ -4,8 +4,8 @@ import React from "react";
 const Media: React.FC = () => {
   return (
     <>
-      <section className="grid grid-cols-1 md:grid-cols-2 text-black px-5 py-10 md:py-16 gap-4 md:px-28 bg-[#FCEDC6] font-Roboto">
-        <div>
+      <section className="grid grid-cols-1 xl:grid-cols-2 text-black px-5 py-10 md:py-16 gap-4 md:text-center bg-[#FCEDC6]">
+        <div className="">
           <div className="flex items-center gap-4 text-[#1D2130]">
             <div className="border border-black h-[1px] w-12" />
             <p className="text-sm md:text-base font-bold">TOP NEWS</p>
@@ -24,13 +24,13 @@ const Media: React.FC = () => {
             </button>
           </div>
         </div>
-       
-        <div className="bg-white p-6 text-[#525560] rounded-xl space-y-6">
-          <div className="flex flex-row gap-6">
+
+        <div className="bg-white p-3 text-[#525560] rounded-xl space-y-10 text-center md:text-left flex flex-col md:space-y-6">
+          <div className="md:flex md:flex-row md:gap-6 space-y-5">
             <img
               src="https://img.freepik.com/free-photo/pleased-looking-side-young-african-american-male-hat-wearing-green-shirt-isoloated-white-background_141793-138920.jpg?t=st=1723810482~exp=1723814082~hmac=6657cb9e7956a588ed788e50d4cfcfe2a584470e667ea51cbef179f1bfdc2482&w=1380"
               alt=""
-              className="w-48 h-40 rounded-xl object-cover"
+              className="md:w-1/2 w-11/12 h-40 rounded-xl object-cover mx-auto"
             />
             <div>
               <p className="text-[#1D2130] font-bold text-xl">
@@ -43,11 +43,11 @@ const Media: React.FC = () => {
               </p>
             </div>
           </div>
-          <div className="flex flex-row gap-6">
+          <div className="md:flex md:flex-row md:gap-6 space-y-5">
             <img
               src="https://img.freepik.com/free-photo/pleased-looking-side-young-african-american-male-hat-wearing-green-shirt-isoloated-white-background_141793-138920.jpg?t=st=1723810482~exp=1723814082~hmac=6657cb9e7956a588ed788e50d4cfcfe2a584470e667ea51cbef179f1bfdc2482&w=1380"
               alt=""
-              className="w-48 h-40 rounded-xl object-cover"
+              className="md:w-1/2 w-11/12 h-40 rounded-xl object-cover mx-auto"
             />
             <div>
               <p className="text-[#1D2130] font-bold text-xl">
@@ -60,11 +60,11 @@ const Media: React.FC = () => {
               </p>
             </div>
           </div>
-          <div className="flex flex-row gap-6">
+          <div className="md:flex md:flex-row md:gap-6 space-y-5">
             <img
               src="https://img.freepik.com/free-photo/pleased-looking-side-young-african-american-male-hat-wearing-green-shirt-isoloated-white-background_141793-138920.jpg?t=st=1723810482~exp=1723814082~hmac=6657cb9e7956a588ed788e50d4cfcfe2a584470e667ea51cbef179f1bfdc2482&w=1380"
               alt=""
-              className="w-48 h-40 rounded-xl object-cover"
+              className="md:w-1/2 w-11/12 h-40 rounded-xl object-cover mx-auto"
             />
             <div>
               <p className="text-[#1D2130] font-bold text-xl">

@@ -19,12 +19,12 @@ const Footer: React.FC = () => {
   });
 
   return (
-    <footer className="bg-black text-white p-8 font-Roboto">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-20">
+    <footer className="bg-black text-white p-8">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
           <h2 className="text-lg font-bold">FUF AFRICA</h2>
         </div>
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 gap-4">
           <div>
             <h3 className="text-sm font-bold">Home</h3>
             <ul>
