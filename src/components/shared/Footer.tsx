@@ -1,6 +1,8 @@
 import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { addDoc, collection } from "firebase/firestore";
+import { db } from "../../config/firebase";
 
 const Footer: React.FC = () => {
   const formik = useFormik({
@@ -8,13 +10,18 @@ const Footer: React.FC = () => {
       email: "",
     },
     validationSchema: Yup.object({
-      email: Yup.string()
-        .email("Invalid email address")
-        .required("Required"),
+      email: Yup.string().email("Invalid email address").required("Required"),
     }),
-    onSubmit: (values) => {
-      // Handle form submission
-      console.log("Form data", values);
+    onSubmit: async (values, { resetForm }) => {
+      try {
+        await addDoc(collection(db, "subscribers"), {
+          email: values.email,
+        });
+        console.log("Email successfully added:", values.email);
+        resetForm(); // Reset the form after submission
+      } catch (error) {
+        console.error("Error adding email to Firestore:", error);
+      }
     },
   });
 
@@ -28,28 +35,76 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-sm font-bold">Home</h3>
             <ul>
-              <li><a href="#" className="text-gray-400 hover:text-white">About us</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white">Team</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white">What we do</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white">Contact</a></li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-white">
+                  About us
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-white">
+                  Team
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-white">
+                  What we do
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-white">
+                  Contact
+                </a>
+              </li>
             </ul>
           </div>
           <div>
             <h3 className="text-sm font-bold">More</h3>
             <ul>
-              <li><a href="#" className="text-gray-400 hover:text-white">Projects</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white">Events</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white">Donate</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white">Blog</a></li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-white">
+                  Projects
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-white">
+                  Events
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-white">
+                  Donate
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-white">
+                  Blog
+                </a>
+              </li>
             </ul>
           </div>
           <div>
             <h3 className="text-sm font-bold">Connect</h3>
             <ul>
-              <li><a href="#" className="text-gray-400 hover:text-white">Facebook</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white">Instagram</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white">Twitter</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white">LinkedIn</a></li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-white">
+                  Facebook
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-white">
+                  Instagram
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-white">
+                  Twitter
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-white">
+                  LinkedIn
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -74,7 +129,9 @@ const Footer: React.FC = () => {
             </button>
           </form>
           {formik.touched.email && formik.errors.email ? (
-            <div className="text-red-500 text-sm mt-2">{formik.errors.email}</div>
+            <div className="text-red-500 text-sm mt-2">
+              {formik.errors.email}
+            </div>
           ) : null}
         </div>
       </div>

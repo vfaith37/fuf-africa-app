@@ -1,6 +1,5 @@
 import React from "react";
 import useContactForm from "../hooks/useForm";
-// import useContactForm from './useContactForm';
 
 const ContactForm: React.FC = () => {
   const formik = useContactForm();
