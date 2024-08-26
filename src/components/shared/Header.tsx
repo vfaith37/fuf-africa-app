@@ -24,6 +24,11 @@ const Header: React.FC = () => {
 
     fetchImage();
   }, []);
+
+  const handleLinkClick = () => {
+    setIsOpen(false);
+  };
+
   const linkClasses = (link: string) =>
     location.pathname === link ? "text-blue-600" : "hover:text-blue-600";
 
@@ -82,33 +87,52 @@ const Header: React.FC = () => {
       </div>
       {isOpen && (
         <div className="md:hidden bg-white shadow-md p-4">
-          <Link to="/" className={`block py-2 ${linkClasses("/")}`}>
+          <Link
+            to="/"
+            className={`block py-2 ${linkClasses("/")}`}
+            onClick={handleLinkClick}
+          >
             Home
           </Link>
-          <Link to="/about" className={`block py-2 ${linkClasses("/about")}`}>
+          <Link
+            to="/about"
+            className={`block py-2 ${linkClasses("/about")}`}
+            onClick={handleLinkClick}
+          >
             About Us
           </Link>
           <Link
             to="/what-we-do"
             className={`block py-2 ${linkClasses("/what-we-do")}`}
+            onClick={handleLinkClick}
           >
             What We Do
           </Link>
-          <Link to="/media" className={`block py-2 ${linkClasses("/media")}`}>
+          <Link
+            to="/media"
+            className={`block py-2 ${linkClasses("/media")}`}
+            onClick={handleLinkClick}
+          >
             Media
           </Link>
           <Link
             to="/contact"
             className={`block py-2 ${linkClasses("/contact")}`}
+            onClick={handleLinkClick}
           >
             Contact
           </Link>
-          <Link to="/blog" className={`block py-2 $linkClasses("/blog")`}>
+          <Link
+            to="/blog"
+            className={`block py-2 $linkClasses("/blog")`}
+            onClick={handleLinkClick}
+          >
             Blog
           </Link>
           <Link
             to="/donate"
             className="block py-2 mt-2 bg-gray-900 text-white text-center rounded hover:bg-gray-800"
+            onClick={handleLinkClick}
           >
             Donate
           </Link>
