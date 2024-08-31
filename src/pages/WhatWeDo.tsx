@@ -16,11 +16,7 @@ const WhatWeDo: React.FC = () => {
             We are working cross country
           </h1>
           <p className="font-normal text-sm md:text-base mb-6 md:mb-9 text-[#525560]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Suspendisse varius enim in eros elementum tristique. Duis cursus,
-            mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
-            libero vitae erat.
-          </p>
+          At FUF Africa, our foundation’s initiatives cover a variety of programs designed to meet the specific needs of marginalized groups. These initiatives include</p>
         </div>
       </div>
       <img
@@ -39,10 +35,20 @@ const WhatWeDo: React.FC = () => {
             <FaDog size={28} />
           </div>
           <div>
-            <h3 className="text-lg font-bold">Family support</h3>
+            <h3 className="text-lg font-bold">Therapy and Rehabilitation</h3>
             <p className="text-sm md:text-base">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros.
+            We provide emotional and psychological support for individuals affected by trauma using sports, music, dance and the arts.
+            </p>
+          </div>
+        </div>
+        <div className="flex items-start gap-6">
+          <div className="bg-black p-2 text-white rounded-lg">
+            <FaDog size={28} />
+          </div>
+          <div>
+            <h3 className="text-lg font-bold gap-6">Scholarships and Educational Support</h3>
+            <p className="text-sm md:text-base">
+            We run health programs and facilitate access to health education and preventive care.
             </p>
           </div>
         </div>
@@ -53,8 +59,7 @@ const WhatWeDo: React.FC = () => {
           <div>
             <h3 className="text-lg font-bold gap-6">Health benefits</h3>
             <p className="text-sm md:text-base">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros.
+            We run health programs and facilitate access to health education and preventive care.
             </p>
           </div>
         </div>
@@ -63,10 +68,9 @@ const WhatWeDo: React.FC = () => {
             <FaDog size={28} />
           </div>
           <div>
-            <h3 className="text-lg font-bold">Family support</h3>
+            <h3 className="text-lg font-bold">Empowerment Initiatives:</h3>
             <p className="text-sm md:text-base">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros.
+            We equip young people and communities with the necessary skills and resources to improve their livelihoods.
             </p>
           </div>
         </div>
@@ -75,10 +79,9 @@ const WhatWeDo: React.FC = () => {
             <FaDog size={28} />
           </div>
           <div>
-            <h3 className="text-lg font-bold gap-6">Health benefits</h3>
+            <h3 className="text-lg font-bold gap-6">Special Needs Support</h3>
             <p className="text-sm md:text-base">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros.
+            We care for and support children with special needs by ensuring that their unique educational and social needs are met.
             </p>
           </div>
         </div>
@@ -87,25 +90,13 @@ const WhatWeDo: React.FC = () => {
             <FaDog size={28} />
           </div>
           <div>
-            <h3 className="text-lg font-bold">Scholarships</h3>
+            <h3 className="text-lg font-bold">Girl Child Empowerment:</h3>
             <p className="text-sm md:text-base">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros.
+            We educate, support, and promote the wellbeing of young girls and women through our outreach programs.
             </p>
           </div>
         </div>
-        <div className="flex items-start gap-6">
-          <div className="bg-black p-2 text-white rounded-lg">
-            <FaDog size={28} />
-          </div>
-          <div>
-            <h3 className="text-lg font-bold">Therapy</h3>
-            <p className="text-sm md:text-base">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros.
-            </p>
-          </div>
-        </div>
+       
       </div>
     </section>
   </>

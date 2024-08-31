@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
         <div>
           <h2 className="text-lg font-bold">FUF AFRICA</h2>
         </div>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-3 gap-4">
           <div>
             <h3 className="text-sm font-bold">Home</h3>
             <ul>
@@ -82,6 +82,7 @@ const Footer: React.FC = () => {
               </li>
             </ul>
           </div>
+
           <div>
             <h3 className="text-sm font-bold">Connect</h3>
             <ul>
@@ -108,6 +109,7 @@ const Footer: React.FC = () => {
             </ul>
           </div>
         </div>
+        
         <div>
           <h3 className="text-lg font-bold">Subscribe to our newsletters</h3>
           <form onSubmit={formik.handleSubmit} className="flex mt-4">

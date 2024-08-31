@@ -145,11 +145,7 @@ const About: React.FC = () => {
               needs
             </h1>
             <p className="text-base font-normal">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique. Duis cursus,
-              mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
-              libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum
-              lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
+            Our mission at the Francisco Udofia Foundation is to restore hope among vulnerable children and communities affected by poverty, abuse, violence, disease, and natural calamities. This foundation is committed to helping those who are often overlooked by society and providing them with opportunities to rebuild their lives. 
             </p>
           </div>
           <div className="space-y-2 mx-5 mt-10">
@@ -159,11 +155,7 @@ const About: React.FC = () => {
               needs
             </h1>
             <p className="text-base font-normal">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique. Duis cursus,
-              mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
-              libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum
-              lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
+            We envision a world where children and their caregivers are empowered to improve their own livelihoods through appropriate and affordable alternatives. FUF seeks to discover communities in need and create environments where people can succeed regardless of their circumstances by equipping them with the necessary tools and knowledge. 
             </p>
           </div>
         </div>
