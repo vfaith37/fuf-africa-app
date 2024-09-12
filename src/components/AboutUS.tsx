@@ -7,13 +7,10 @@ const AboutUs: React.FC = () => {
         {/* Header Section */}
         <div className="text-center lg:text-left lg:flex lg:justify-between lg:items-start mb-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-4 lg:mb-0">
-            We are a non-governmental organization
+            We are a non-governmental organizations
           </h1>
           <p className="text-gray-600 lg:max-w-md">
-            Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. 
-            Nunc ut sem vitae risus tristique posuere. Lorem ipsum dolor sit 
-            amet, consectetur adipiscing elit. Suspendisse varius enim in eros 
-            elementum tristique.
+          At FUF Africa, our foundation’s initiatives cover a variety of programs designed to meet the specific needs of marginalized groups. These initiatives include providing emotional and psychological support for individuals affected by trauma through therapy and rehabilitation, offering scholarships and educational support to help children reach their full potential. We run health programs and facilitate access to health education and preventive care, focusing on reproductive health, HIV awareness and other preventable diseases. We empower young people and communities with the skills and resources needed to improve their livelihoods. We also care for and support children with special needs by ensuring that their unique educational and social needs are met. Through our girl child empowerment outreach program, we educate, support, and promote the wellbeing of young girls and women by providing essential information on menstrual hygiene, supplying sanitary products, and creating safe spaces for their growth.
           </p>
         </div>
 

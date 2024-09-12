@@ -16,14 +16,14 @@ const Volunteer: React.FC = () => {
   }, []);
 
   return (
-    <section className="flex flex-col justify-center items-center text-white px-4 h-96 mb-16 my-20 md:my-24">
+    <section className="flex flex-col justify-center items-center text-white px-4 md:px-16 h-96 mb-16 my-20 md:my-24">
       <div
         className="bg-cover flex flex-col justify-center items-center text-white w-full rounded-lg h-96 px-6"
         style={{
           backgroundImage: `url(${backgroundImageUrl})`,
         }}
       >
-        <p className="font-bold text-4xl text-center mb-4 w-[620px]">
+        <p className="font-bold text-4xl text-center mb-4 w-auto">
           You can contribute to provide a place for children with special needs!
         </p>
         <div className="flex text-black gap-6">

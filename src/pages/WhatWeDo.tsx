@@ -16,7 +16,8 @@ const WhatWeDo: React.FC = () => {
             We are working cross country
           </h1>
           <p className="font-normal text-sm md:text-base mb-6 md:mb-9 text-[#525560]">
-          At FUF Africa, our foundation’s initiatives cover a variety of programs designed to meet the specific needs of marginalized groups. These initiatives include</p>
+          At FUF Africa, our foundation’s initiatives cover a variety of programs designed to meet the specific needs of marginalized groups. These initiatives include providing emotional and psychological support for individuals affected by trauma through therapy and rehabilitation, offering scholarships and educational support to help children reach their full potential. We run health programs and facilitate access to health education and preventive care, focusing on reproductive health, HIV awareness and other preventable diseases. We empower young people and communities with the skills and resources needed to improve their livelihoods. We also care for and support children with special needs by ensuring that their unique educational and social needs are met. Through our girl child empowerment outreach program, we educate, support, and promote the wellbeing of young girls and women by providing essential information on menstrual hygiene, supplying sanitary products, and creating safe spaces for their growth
+        </p>
         </div>
       </div>
       <img
@@ -25,7 +26,7 @@ const WhatWeDo: React.FC = () => {
         alt="video"
       />
     </section>
-    <section className="px-10 py-24 text-[#1D2130] bg-[#FCEDC6]">
+    <section className="px-10 py-24 text-[#1D2130] bg-[#FCEDC6] xl:px-72">
       <h1 className="font-bold text-4xl md:text-5xl mb-16 md:text-center">
         What we do for people with special needs
       </h1>
