@@ -21,6 +21,7 @@ import CreateUser from "./admin/pages/CreateUser";
 import { signOut } from "firebase/auth";
 import { auth } from "./config/firebase";
 import ManageUsers from "./admin/pages/ManageUsers";
+import Readmore from "./pages/Readmore";
 
 const App: React.FC = () => {
   const [isAuth, setIsAuth] = useState<boolean>(
@@ -44,6 +45,7 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<AppLayout />}>
           <Route index element={<Home />} />
+          <Route path="readmore/:id" element={<Readmore />} />
           <Route path="about" element={<About />} />
           <Route path="what-we-do" element={<WhatWeDo />} />
           <Route path="media" element={<Media />} />

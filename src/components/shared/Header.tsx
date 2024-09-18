@@ -52,9 +52,9 @@ const Header: React.FC = () => {
           <Link to="/what-we-do" className={linkClasses("/what-we-do")}>
             What We Do
           </Link>
-          <Link to="/media" className={linkClasses("/media")}>
+          {/* <Link to="/media" className={linkClasses("/media")}>
             Media
-          </Link>
+          </Link> */}
           <Link to="/contact" className={linkClasses("/contact")}>
             Contact
           </Link>
@@ -108,13 +108,13 @@ const Header: React.FC = () => {
           >
             What We Do
           </Link>
-          <Link
+          {/* <Link
             to="/media"
             className={`block py-2 ${linkClasses("/media")}`}
             onClick={handleLinkClick}
           >
             Media
-          </Link>
+          </Link> */}
           <Link
             to="/contact"
             className={`block py-2 ${linkClasses("/contact")}`}

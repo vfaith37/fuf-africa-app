@@ -49,15 +49,10 @@ const Donation: React.FC = () => {
           How we use your donations
         </h2>
           <p className="text-lg text-gray-700 mb-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            varius enim in eros elementum tristique. Duis cursus, mi quis
-            viverra ornare, eros dolor interdum nulla, ut commodo diam libero
-            vitae erat. Nunc ut sem vitae risus tristique posuere.
+          We take great care in ensuring that every donation is used effectively to maximize impact. Your donations fund a wide range of programs, including educational scholarships, health and wellness initiatives, rehabilitation services, and empowerment projects for young people.
           </p>
           <p className="text-lg text-gray-700 mb-6">
-            Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc
-            ut sem vitae risus tristique posuere. Aenean faucibus nibh et justo
-            cursus id rutrum lorem imperdiet.
+          We also allocate resources to our special needs programs, providing tailored support to children with disabilities. Our goal is to ensure transparency and trust, so every donation is directed toward helping the children and communities who need it most.
           </p>
         </div>
     </>

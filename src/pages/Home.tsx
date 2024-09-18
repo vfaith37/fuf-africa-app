@@ -5,6 +5,9 @@ import InfoSection from "../components/InfoSection";
 import { FaDog } from "react-icons/fa6";
 import Volunteer from "../components/Volunteer";
 import Event from "../components/Events";
+import PWHD from "../components/ProjectsWeHaveDone";
+
+
 
 const Home: React.FC = () => {
   return (
@@ -50,8 +53,7 @@ const Home: React.FC = () => {
             Some services we provide
           </h2>
           <p className="text-sm md:text-base mb-8">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            varius enim in eros elementum tristique.
+           
             <div className="md:hidden order-3 my-8">
               <img
                 className="w-full h-auto object-cover rounded-lg"
@@ -116,6 +118,9 @@ const Home: React.FC = () => {
           />
         </div>
       </section>
+      {/* <Carousel /> */}
+     
+      <PWHD />
       <InfoSection />
       <Volunteer />
       <Event />
