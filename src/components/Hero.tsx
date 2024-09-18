@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { fetchImageUrl } from "../utils/storageUtils";
+import { FaRegCirclePlay } from "react-icons/fa6";
 
 const Hero: React.FC = () => {
   const [backgroundImageUrl, setBackgroundImageUrl] = useState<string>("");
@@ -17,21 +18,31 @@ const Hero: React.FC = () => {
 
   return (
     <section
-      className="bg-cover bg-center h-screen flex flex-col justify-center items-center text-white"
+      className="bg-cover bg-center h-auto py-8 md:py-0 md:h-[650px] flex flex-col text-white"
       style={{
         backgroundImage: `url(${backgroundImageUrl})`,
       }}
     >
-      <h1 className="text-4xl mx-7 text-center md:text-6xl font-bold">
+      <div className="pl-4 md:pl-28 w-[447px] md:w-[600px] pt-8 md:pt-20">
+      <h1 className="text-5xl md:text-6xl font-bold">
         We Spread Compassion, We Create Smiles
       </h1>
       <div className="mt-8 space-x-4">
-        <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">
+        <button className="bg-white text-black px-4 py-2 rounded">
           What We Do
         </button>
-        <button className="bg-white hover:bg-gray-100 text-blue-600 px-4 py-2 rounded">
+        <button className="text-white px-4 py-2">
+          <div className="items-center flex gap-2">
+         <FaRegCirclePlay />
           Play Video
+          </div>
         </button>
+      </div>
+      </div>
+      <div className="flex justify-between items-center px-4 pt-20 md:pt-0 md:mt-48">
+        <h2 className="font-normal text-lg text-center w-64">230 children under our care</h2>
+        <div className="w-full border border-white h-[1px]" />
+        <h2 className="font-normal text-lg text-center w-64">58 donations collected</h2>
       </div>
     </section>
   );

@@ -70,8 +70,7 @@ const Home: React.FC = () => {
               <div>
                 <h3 className="text-lg font-bold">Family support</h3>
                 <p className="text-sm md:text-base">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Suspendisse varius enim in eros.
+                FUF Africa provides emotional support, education, health programs, and empowerment, with a focus on children with special needs and girl child empowerment.
                 </p>
               </div>
             </div>
@@ -118,8 +117,6 @@ const Home: React.FC = () => {
           />
         </div>
       </section>
-      {/* <Carousel /> */}
-     
       <PWHD />
       <InfoSection />
       <Volunteer />

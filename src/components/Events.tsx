@@ -68,7 +68,7 @@ const Event: React.FC = () => {
       {events.map((item) => 
            { const { day, month } = extractDayAndMonth(item.date);
             return(
-        <div key={item.id} className="flex-none rounded-xl w-[500px] bg-[#F2C94C]">
+        <div key={item.id} className="flex-none rounded-xl w-[300px] md:w-[500px] bg-[#F2C94C]">
               <div className="flex px-10 py-8 gap-4">
               <div>
                   <p className="font-medium text-4xl">{day}</p>
