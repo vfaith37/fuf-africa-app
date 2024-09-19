@@ -1,28 +1,5 @@
 import React, { useState } from 'react';
-
-type CarouselItem = {
-  id: number;
-  title: string;
-  image: string;
-};
-
-const carouselData: CarouselItem[] = [
-  {
-    id: 1,
-    title: 'Item 1',
-    image: 'https://via.placeholder.com/400x200?text=Slide+1',
-  },
-  {
-    id: 2,
-    title: 'Item 2',
-    image: 'https://via.placeholder.com/400x200?text=Slide+2',
-  },
-  {
-    id: 3,
-    title: 'Item 3',
-    image: 'https://via.placeholder.com/400x200?text=Slide+3',
-  },
-];
+import { carouselData } from '../data';
 
 const Carousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

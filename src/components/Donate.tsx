@@ -27,7 +27,7 @@ const Donate: React.FC<DonateProps> = ({ toggleModal, isModalOpen }) => {
   const style = {
     input:
       "block w-full px-4 py-2 mb-4 rounded-md border border-gray-300 focus:outline-none focus:border-primary-500",
-    button: "block w-full px-4 py-2 bg-[#1369A1] text-white rounded-md",
+    button: "block w-full px-4 py-2 bg-[#F2C94C] rounded-md text-black",
     error: "text-red-500 text-sm mt-1",
   };
 

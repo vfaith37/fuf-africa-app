@@ -1,43 +1,8 @@
 import React from "react";
 import HorizontalScroll from "./horizontalScrollable";
+import { events } from "../data";
 
-interface Event {
-  id: number;
-  title: string;
-  date: string;
-}
 
-const events: Event[] = [
-  {
-    id: 1,
-    title: "Say no to plastic usage and save the planet",
-    date: "August 20, 2024",
-  },
-  {
-    id: 2,
-    title: "Monthly orphanage visits",
-    date: "August 20, 2024",
-  },
-  {
-    id: 3,
-    title: "Annual Tech Conference",
-    date: "August 20, 2024",
-  },
-  {
-    id: 4,
-    title: "Annual Tech Conference",
-    date: "August 20, 2024",
-  }, {
-    id: 5,
-    title: "Annual Tech Conference",
-    date: "August 20, 2024",
-  },
-  {
-    id: 6,
-    title: "Web Development Workshop",
-    date: "September 15, 2024",
-  },
-];
 
 const Event: React.FC = () => {
   function extractDayAndMonth(dateString: string): {

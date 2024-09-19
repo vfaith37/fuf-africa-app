@@ -45,7 +45,7 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<AppLayout />}>
           <Route index element={<Home />} />
-          <Route path="readmore/:id" element={<Readmore />} />
+          <Route path="project/readmore/:id" element={<Readmore />} />
           <Route path="about" element={<About />} />
           <Route path="what-we-do" element={<WhatWeDo />} />
           <Route path="media" element={<Media />} />

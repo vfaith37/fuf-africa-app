@@ -15,6 +15,7 @@ const CreatePost: React.FC<CreatePostProps> = ({ isAuth }) => {
 
   const postsCollectionRef = collection(db, "posts");
   const navigate = useNavigate();
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [userData, setUserData] = useState<any>(null);
 
   useEffect(() => {
