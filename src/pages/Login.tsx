@@ -18,10 +18,10 @@ const Login: React.FC<LoginProps> = ({ setIsAuth, setIsAdmin }) => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in successfully
-        if (email === "vfaith37@gmail.com") {
+       // if (email === "vfaith37@gmail.com") {
           localStorage.setItem("isAdmin", "true");
           setIsAdmin(true);
-        }
+       // }
         const user = userCredential.user;
         console.log("User signed in:", user);
         localStorage.setItem("isAuth", "true");
