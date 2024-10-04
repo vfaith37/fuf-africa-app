@@ -26,7 +26,6 @@ const ProjectUploadForm: React.FC = () => {
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  git remote set-url origin https://vfaith37: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@github.com/vfaith37/fuf-africa-app.git
 
   // Handle form changes
   const handleChange = (
