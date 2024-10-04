@@ -176,18 +176,18 @@ const About: React.FC = () => {
             </p>
             <div className="flex gap-8 text-black mb-8 md:mb-14">
               <div>
-                <p className="font-medium text-2xl">34M+</p>
+                <p className="font-medium text-2xl">2M+</p>
                 <p className="font-medium text-xs">Donation Recieved</p>
               </div>
 
               <div>
-                <p className="font-medium text-2xl">400+</p>
+                <p className="font-medium text-2xl">100+</p>
                 <p className="font-medium text-xs">Volunteers</p>
               </div>
 
               <div>
-                <p className="font-medium text-2xl">20+</p>
-                <p className="font-medium text-xs">Care Homes</p>
+                <p className="font-medium text-2xl">10+</p>
+                <p className="font-medium text-xs">Outreaches</p>
               </div>
             </div>
           </div>

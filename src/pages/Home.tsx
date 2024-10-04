@@ -1,15 +1,30 @@
 // src/pages/Home.tsx
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Hero from "../components/Hero";
 import InfoSection from "../components/InfoSection";
-import { FaDog } from "react-icons/fa6";
+import { FaDog, FaHandHoldingMedical, FaHotel, FaWater } from "react-icons/fa6";
 import Volunteer from "../components/Volunteer";
 import Event from "../components/Events";
 import PWHD from "../components/ProjectsWeHaveDone";
-
-
+import { storage } from "../config/firebase";
+import { getDownloadURL, ref } from "firebase/storage";
 
 const Home: React.FC = () => {
+  const [imageUrl, setImageUrl] = useState<string>("");
+
+  useEffect(() => {
+    // Create a reference to the image in Firebase Storage
+    const imageRef = ref(storage, "IMG_7018.jpg"); // Adjust the path
+    
+    // Fetch the image URL
+    getDownloadURL(imageRef)
+      .then((url) => {
+        setImageUrl(url); // Set the fetched URL to state
+      })
+      .catch((error) => {
+        console.error("Error fetching image from Firebase Storage:", error);
+      });
+  }, []);
   return (
     <>
       <Hero />
@@ -39,8 +54,8 @@ const Home: React.FC = () => {
         </div>
         <img
           className="w-full h-auto md:h-full object-cover rounded-lg"
-          src="https://img.freepik.com/free-photo/pleased-looking-side-young-african-american-male-hat-wearing-green-shirt-isoloated-white-background_141793-138920.jpg?t=st=1723810482~exp=1723814082~hmac=6657cb9e7956a588ed788e50d4cfcfe2a584470e667ea51cbef179f1bfdc2482&w=1380"
-          alt="video"
+          src={imageUrl}
+          alt="know about us"
         />
       </section>
       <section className="grid grid-cols-1 md:grid-cols-2 gap-24 bg-[#FEF5E7] px-5 md:px-10 py-10 md:py-16 xl:px-56">
@@ -65,7 +80,7 @@ const Home: React.FC = () => {
           <div className="space-y-6">
             <div className="flex items-start gap-6">
               <div className="bg-black p-2 text-white rounded-lg">
-                <FaDog color="#FCEDC6" size={28} />
+                <FaHotel color="#FCEDC6" size={28} />
               </div>
               <div>
                 <h3 className="text-lg font-bold">Family support</h3>
@@ -76,7 +91,7 @@ const Home: React.FC = () => {
             </div>
             <div className="flex items-start gap-6">
               <div className="bg-black p-2 text-white rounded-lg">
-                <FaDog color="#FCEDC6" size={28} />
+                <FaHandHoldingMedical color="#FCEDC6" size={28} />
               </div>
               <div>
                 <h3 className="text-lg font-bold gap-6">Health benefits</h3>
@@ -87,7 +102,7 @@ const Home: React.FC = () => {
             </div>
             <div className="flex items-start gap-6">
               <div className="bg-black p-2 text-white rounded-lg">
-                <FaDog color="#FCEDC6" size={28} />
+                <FaWater color="#FCEDC6" size={28} />
               </div>
               <div>
                 <h3 className="text-lg font-bold">Scholarships and Educational Support</h3>

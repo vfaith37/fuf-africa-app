@@ -26,37 +26,40 @@ type Event = {
   id: number;
   title: string;
   date: string;
+  location: string;
+  theme: string | undefined;
+  description: string[];
+  imageUrl: string
 }
 
 export const events: Event[] = [
   {
     id: 1,
-    title: "Say no to plastic usage and save the planet",
-    date: "August 20, 2024",
+    title: "Autistic people inclusiveness",
+    location: "Opp Opolo round about, Yenagoa, Bayelsa, Nigeria",
+    theme: "Empowering Autistic Voices",
+    date: "March 03, 2024 8:30 AM",
+    description: [
+      "Et morbi vitae lobortis nam odio. Faucibus vitae vel neque nullam in in lorem platea mattis. Euismod aenean rhoncus scelerisque amet tincidunt scelerisque aliquam. Luctus porttitor elit vel sapien, accumsan et id ut est. Posuere molestie in turpis quam. Scelerisque in viverra mi ut quisque. In sollicitudin sapien, vel nulla quisque vitae. Scelerisque eget accumsan, non in. Posuere magna erat bibendum amet, nisi eu id.",
+      "Viverra at diam nunc non ornare. Sed ultricies pulvinar nunc, lacus sem. Tellus aliquam ut euismod cursus dui lectus. Ut amet, cras volutpat dui. A bibendum viverra eu cras. Mauris morbi sed dignissim a in nec aliquam fringilla et. Mattis elit dignissim nibh sit. Donec arcu sed elit scelerisque tempor ornare tristique. Integer faucibus duis praesent tempor feugiat ornare in. Erat libero egestas porttitor nunc pellentesque mauris et pulvinar eget.",
+      "Viverra at diam nunc non ornare. Sed ultricies pulvinar nunc, lacus sem. Tellus aliquam ut euismod cursus dui lectus. Ut amet, cras volutpat dui. A bibendum viverra eu cras. Mauris morbi sed dignissim a in nec aliquam fringilla et. Mattis elit dignissim nibh sit. Donec arcu sed elit scelerisque tempor ornare tristique. Integer faucibus duis praesent tempor feugiat ornare in. Erat libero egestas porttitor nunc pellentesque mauris et pulvinar eget.",
+    ],
+    imageUrl:
+      "https://img.freepik.com/free-photo/pleased-looking-side-young-african-american-male-hat-wearing-green-shirt-isoloated-white-background_141793-138920.jpg?t=st=1723810482~exp=1723814082~hmac=6657cb9e7956a588ed788e50d4cfcfe2a584470e667ea51cbef179f1bfdc2482&w=1380",
+
   },
   {
     id: 2,
-    title: "Monthly orphanage visits",
-    date: "August 20, 2024",
-  },
-  {
-    id: 3,
-    title: "Annual Tech Conference",
-    date: "August 20, 2024",
-  },
-  {
-    id: 4,
-    title: "Annual Tech Conference",
-    date: "August 20, 2024",
-  }, {
-    id: 5,
-    title: "Annual Tech Conference",
-    date: "August 20, 2024",
-  },
-  {
-    id: 6,
-    title: "Web Development Workshop",
-    date: "September 15, 2024",
+    title: "PAD-A-GIRL INITIATIVE",
+    location: "Opp Opolo round about, Yenagoa, Bayelsa, Nigeria",
+    theme: "",
+    date: "April 13, 2022 8:30 AM",
+    description: [
+      "Et morbi vitae lobortis nam odio. Faucibus vitae vel neque nullam in in lorem platea mattis. Euismod aenean rhoncus scelerisque amet tincidunt scelerisque aliquam. Luctus porttitor elit vel sapien, accumsan et id ut est. Posuere molestie in turpis quam. Scelerisque in viverra mi ut quisque. In sollicitudin sapien, vel nulla quisque vitae. Scelerisque eget accumsan, non in. Posuere magna erat bibendum amet, nisi eu id.",
+      "Viverra at diam nunc non ornare. Sed ultricies pulvinar nunc, lacus sem. Tellus aliquam ut euismod cursus dui lectus. Ut amet, cras volutpat dui. A bibendum viverra eu cras. Mauris morbi sed dignissim a in nec aliquam fringilla et. Mattis elit dignissim nibh sit. Donec arcu sed elit scelerisque tempor ornare tristique. Integer faucibus duis praesent tempor feugiat ornare in. Erat libero egestas porttitor nunc pellentesque mauris et pulvinar eget.",
+    ],
+    imageUrl:
+      "https://img.freepik.com/free-photo/pleased-looking-side-young-african-american-male-hat-wearing-green-shirt-isoloated-white-background_141793-138920.jpg?t=st=1723810482~exp=1723814082~hmac=6657cb9e7956a588ed788e50d4cfcfe2a584470e667ea51cbef179f1bfdc2482&w=1380",
   },
 ];
 
@@ -66,7 +69,7 @@ export const servicesProvided = [
       title: "Family support",
       description:
         "FUF Africa provides emotional support, education, health programs, and empowerment, with a focus on children with special needs and girl child empowerment.",
-      icon: "building",
+      icon: "./assets/icon.png",
     },
     {
       title: "Health benefits",
@@ -165,6 +168,19 @@ export const servicesProvided = [
               ],
       },
       ];
+
+      export const eventData = [{
+        id: 1,
+        title: "A day with our wonderful children",
+        location: "Opp Opolo round about, Yenagoa, Bayelsa, Nigeria",
+        date: "April 13, 2022 8:30 AM",
+        description: [
+          "Et morbi vitae lobortis nam odio. Faucibus vitae vel neque nullam in in lorem platea mattis. Euismod aenean rhoncus scelerisque amet tincidunt scelerisque aliquam. Luctus porttitor elit vel sapien, accumsan et id ut est. Posuere molestie in turpis quam. Scelerisque in viverra mi ut quisque. In sollicitudin sapien, vel nulla quisque vitae. Scelerisque eget accumsan, non in. Posuere magna erat bibendum amet, nisi eu id.",
+          "Viverra at diam nunc non ornare. Sed ultricies pulvinar nunc, lacus sem. Tellus aliquam ut euismod cursus dui lectus. Ut amet, cras volutpat dui. A bibendum viverra eu cras. Mauris morbi sed dignissim a in nec aliquam fringilla et. Mattis elit dignissim nibh sit. Donec arcu sed elit scelerisque tempor ornare tristique. Integer faucibus duis praesent tempor feugiat ornare in. Erat libero egestas porttitor nunc pellentesque mauris et pulvinar eget.",
+        ],
+        imageUrl:
+          "https://img.freepik.com/free-photo/pleased-looking-side-young-african-american-male-hat-wearing-green-shirt-isoloated-white-background_141793-138920.jpg?t=st=1723810482~exp=1723814082~hmac=6657cb9e7956a588ed788e50d4cfcfe2a584470e667ea51cbef179f1bfdc2482&w=1380",
+      }]
 
   export const carouselData: CarouselItem[] = [
     {

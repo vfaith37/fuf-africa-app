@@ -20,14 +20,16 @@ const Login: React.FC<LoginProps> = ({ setIsAuth, setIsAdmin }) => {
         // Signed in successfully
        // if (email === "vfaith37@gmail.com") {
           localStorage.setItem("isAdmin", "true");
+          localStorage.setItem("isAuth", "true");
           setIsAdmin(true);
        // }
         const user = userCredential.user;
+        console.log(12, user);
+        
+        setIsAuth(true); // Update auth state
         console.log("User signed in:", user);
-        localStorage.setItem("isAuth", "true");
         fetchUserData();
         navigate("/admin");
-        setIsAuth(true); // Update auth state
       })
       .catch((error) => {
         const errorCode = error.code;

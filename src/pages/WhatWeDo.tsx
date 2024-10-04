@@ -1,8 +1,25 @@
 // src/pages/WhatWeDo.tsx
-import React from "react";
-import { FaDog } from "react-icons/fa6";
+import { getDownloadURL, ref } from "firebase/storage";
+import React, { useEffect, useState } from "react";
+import { FaChild, FaDog, FaHandHoldingMedical, FaSquarePersonConfined, FaWater } from "react-icons/fa6";
+import { storage } from "../config/firebase";
 
 const WhatWeDo: React.FC = () => {
+  const [imageUrl, setImageUrl] = useState<string>("");
+
+  useEffect(() => {
+    // Create a reference to the image in Firebase Storage
+    const imageRef = ref(storage, "IMG_7717.jpg"); // Adjust the path
+    
+    // Fetch the image URL
+    getDownloadURL(imageRef)
+      .then((url) => {
+        setImageUrl(url); // Set the fetched URL to state
+      })
+      .catch((error) => {
+        console.error("Error fetching image from Firebase Storage:", error);
+      });
+  }, []);
   return (
     <>
     <section className="grid grid-cols-1 md:grid-cols-2 text-black px-5 py-10 gap-4">
@@ -22,8 +39,8 @@ const WhatWeDo: React.FC = () => {
       </div>
       <img
         className="w-full  h-auto md:h-full object-cover rounded-lg"
-        src="https://img.freepik.com/free-photo/pleased-looking-side-young-african-american-male-hat-wearing-green-shirt-isoloated-white-background_141793-138920.jpg?t=st=1723810482~exp=1723814082~hmac=6657cb9e7956a588ed788e50d4cfcfe2a584470e667ea51cbef179f1bfdc2482&w=1380"
-        alt="video"
+        src={imageUrl}
+        alt="image"
       />
     </section>
     <section className="px-10 py-24 text-[#1D2130] bg-[#FCEDC6] xl:px-72">
@@ -33,7 +50,7 @@ const WhatWeDo: React.FC = () => {
       <div className="md:grid md:grid-cols-2 gap-8 space-y-5">
         <div className="flex items-start gap-6">
           <div className="bg-black p-2 text-white rounded-lg">
-            <FaDog size={28} />
+            <FaDog color="#FCEDC6" size={28} />
           </div>
           <div>
             <h3 className="text-lg font-bold">Therapy and Rehabilitation</h3>
@@ -44,7 +61,7 @@ const WhatWeDo: React.FC = () => {
         </div>
         <div className="flex items-start gap-6">
           <div className="bg-black p-2 text-white rounded-lg">
-            <FaDog size={28} />
+            <FaWater color="#FCEDC6" size={28} />
           </div>
           <div>
             <h3 className="text-lg font-bold gap-6">Scholarships and Educational Support</h3>
@@ -55,7 +72,7 @@ const WhatWeDo: React.FC = () => {
         </div>
         <div className="flex items-start gap-6">
           <div className="bg-black p-2 text-white rounded-lg">
-            <FaDog size={28} />
+            <FaHandHoldingMedical color="#FCEDC6" size={28} />
           </div>
           <div>
             <h3 className="text-lg font-bold gap-6">Health benefits</h3>
@@ -66,7 +83,7 @@ const WhatWeDo: React.FC = () => {
         </div>
         <div className="flex items-start gap-6">
           <div className="bg-black p-2 text-white rounded-lg">
-            <FaDog size={28} />
+            <FaDog color="#FCEDC6" size={28} />
           </div>
           <div>
             <h3 className="text-lg font-bold">Empowerment Initiatives:</h3>
@@ -77,7 +94,7 @@ const WhatWeDo: React.FC = () => {
         </div>
         <div className="flex items-start gap-6">
           <div className="bg-black p-2 text-white rounded-lg">
-            <FaDog size={28} />
+            <FaSquarePersonConfined color="#FCEDC6" size={28} />
           </div>
           <div>
             <h3 className="text-lg font-bold gap-6">Special Needs Support</h3>
@@ -88,7 +105,7 @@ const WhatWeDo: React.FC = () => {
         </div>
         <div className="flex items-start gap-6">
           <div className="bg-black p-2 text-white rounded-lg">
-            <FaDog size={28} />
+            <FaChild color="#FCEDC6" size={28} />
           </div>
           <div>
             <h3 className="text-lg font-bold">Girl Child Empowerment:</h3>

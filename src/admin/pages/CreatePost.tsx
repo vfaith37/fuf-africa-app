@@ -1,81 +1,29 @@
 import React, { useState, useEffect } from "react";
-import { addDoc, collection, Timestamp } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
-import { db, auth, storage } from "../../config/firebase"; // Import storage
-import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { auth } from "../../config/firebase";
+import EventModalForm from "./EventPost";
+import BlogPostForm from "./BlogPost";
+import ProjectPost from "./ProjectPost";
 
 interface CreatePostProps {
   isAuth: boolean;
 }
 
 const CreatePost: React.FC<CreatePostProps> = ({ isAuth }) => {
-  const [title, setTitle] = useState<string>("");
-  const [paragraphs, setParagraphs] = useState<string[]>([""]); // State for multiple paragraphs
-  const [image, setImage] = useState<File | null>(null); // State for image
-
-  const postsCollectionRef = collection(db, "posts");
   const navigate = useNavigate();
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const [userData, setUserData] = useState<any>(null);
+  const [, setUserData] = useState<any>(null);
 
   useEffect(() => {
     // Retrieve user data from localStorage
     const storedUserData = localStorage.getItem("userData");
 
-    if (storedUserData) {
+    if (!storedUserData) {
       // Parse the JSON string back into an object
-      const parsedUserData = JSON.parse(storedUserData);
-      setUserData(parsedUserData);
-    } else {
-      // If no user data is found, redirect to login
+      setUserData(null);
       navigate("/login");
-    }
+    } 
   }, [navigate]);
-
-  const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    if (event.target.files && event.target.files[0]) {
-      setImage(event.target.files[0]);
-    }
-  };
-
-  const handleParagraphChange = (index: number, value: string) => {
-    const updatedParagraphs = [...paragraphs];
-    updatedParagraphs[index] = value;
-    setParagraphs(updatedParagraphs);
-  };
-
-  const addParagraph = () => {
-    setParagraphs([...paragraphs, ""]);
-  };
-
-  const removeParagraph = (index: number) => {
-    setParagraphs(paragraphs.filter((_, i) => i !== index));
-  };
-
-  const createPost = async () => {
-    let imageUrl = "";
-
-    if (image) {
-      const imageRef = ref(storage, `images/${image.name}`);
-      await uploadBytes(imageRef, image);
-      imageUrl = await getDownloadURL(imageRef);
-    }
-
-    await addDoc(postsCollectionRef, {
-      title,
-      paragraphs, // Save the paragraphs
-      imageUrl, // Save the image URL
-      author: {
-        name: auth.currentUser?.displayName || "Jane Doe",
-        profileImageUrl: auth.currentUser?.photoURL || "Jane Doe",
-        id: auth.currentUser?.uid || "12345678987654323",
-        position: userData.position,
-      },
-      timestamp: Timestamp.now(),
-    });
-
-    navigate("/admin/post");
-  };
 
   useEffect(() => {
     if (!isAuth) {
@@ -85,8 +33,8 @@ const CreatePost: React.FC<CreatePostProps> = ({ isAuth }) => {
   console.log(auth);
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center font-Roboto">
-      <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center font-Roboto flex-col gap-6">
+      {/* <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
         <h1 className="text-2xl font-semibold mb-6 text-center">
           Create A Post
         </h1>
@@ -150,7 +98,10 @@ const CreatePost: React.FC<CreatePostProps> = ({ isAuth }) => {
         >
           Submit Post
         </button>
-      </div>
+      </div> */}
+      <BlogPostForm />
+      <EventModalForm />
+      <ProjectPost />
     </div>
   );
 };
