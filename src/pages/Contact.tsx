@@ -2,7 +2,7 @@
 import React from "react";
 import { FaFacebook, FaXTwitter, FaLinkedin } from "react-icons/fa6";
 import ContactForm from "../components/ContactForm";
-import MapView from "./MapView";
+// import MapView from "./MapView";
 
 const Contact: React.FC = () => {
   return (
@@ -27,13 +27,13 @@ const Contact: React.FC = () => {
           <div className="text-[#1D2130] flex flex-row md:flex-col gap-6 pt-12 justify-between md:justify-center">
             <div>
               <p className="mb-3 font-bold text-2xl">Let's Talk!</p>
-              <p className="text-base font-normal">+234 9012346514</p>
-              <p className="text-base font-normal">hello@largerthani.com</p>
+              <p className="text-base font-normal">+234 9038481215</p>
+              <p className="text-base font-normal">info@fufafrica.org</p>
             </div>
             <div>
               <p className="mb-3 font-bold text-2xl">Headoffice</p>
-              <p className="text-base font-normal">8 Brewery Drive, Lagos, </p>
-              <p className="text-base font-normal">Nigeria</p>
+              <p className="text-base font-normal">Lagos, Nigeria.</p>
+              {/* <p className="text-base font-normal">Nigeria</p> */}
             </div>
           </div>
         </div>
@@ -50,7 +50,7 @@ const Contact: React.FC = () => {
         </div>
       </section>
       <ContactForm />
-      <MapView />
+      {/* <MapView /> */}
     </>
   );
 };
