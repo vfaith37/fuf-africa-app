@@ -2,6 +2,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import PWHD from "../components/ProjectsWeHaveDone";
 import Volunteer from "../components/Volunteer";
+import { scrollData } from "../data";
 
 interface Item {
   title: string;
@@ -12,12 +13,15 @@ interface Item {
 }
 
 const ProjectReadmore: React.FC = () => {
+  // Caleb - (Im fetching the data directly from data.ts instead of from the PWHD component)
   const location = useLocation();
-  const { item } = location.state || {}; // Extract the item data
+  const id: any = location.pathname[18]; //sorry guy im using this to find out the id of the item
+  const item = scrollData[id - 1]; //this is now the item we are looking for
+
+  // const { item } = location.state || {}; // Extract the item data
 
   window.scrollTo(0, 0);
 
-  
   // Ensure 'item' conforms to the 'Item' interface
   const itemData = item as Item;
 
@@ -34,7 +38,8 @@ const ProjectReadmore: React.FC = () => {
         </div>
         <div className="pt-6 md:pt-8 px-2">
           <h1 className="font-bold text-2xl md:text-3xl mb-4 md:mb-5">
-            {itemData.title}{itemData.theme ? ":" : null} {itemData.theme}
+            {itemData.title}
+            {itemData.theme ? ":" : null} {itemData.theme}
           </h1>
           {itemData.paragraphs?.map((paragraph, index) => (
             <p
@@ -49,7 +54,10 @@ const ProjectReadmore: React.FC = () => {
 
       {/* Video or Image Display */}
       {itemData.videoUrl ? (
-        <video controls className="w-full h-auto md:h-full object-cover rounded-lg">
+        <video
+          controls
+          className="w-full h-auto md:h-full object-cover rounded-lg"
+        >
           <source src={itemData.videoUrl} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
