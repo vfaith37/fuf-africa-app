@@ -1,7 +1,9 @@
 import React from "react";
-import Event from "../components/Events";
+// import Event from "../components/Events";
 import { FaLocationDot, FaRegCalendar } from "react-icons/fa6";
 import { useLocation } from "react-router-dom";
+import PWHD from "../components/ProjectsWeHaveDone";
+import Volunteer from "../components/Volunteer";
 
 interface EventData {
   title: string;
@@ -9,6 +11,7 @@ interface EventData {
   date: string;
   description: string[];
   imageUrl: string;
+  images: string[];
 }
 
 const EventReadmore: React.FC = () => {
@@ -50,18 +53,36 @@ const EventReadmore: React.FC = () => {
             >
             {paragraph}
           </p>
-          { index === 1 &&
+          {/* { index === 1 &&
           <img
           className="w-full h-auto md:h-96 object-cover rounded-lg mb-5"
           src={itemData.imageUrl}
           alt="Event visual"
         />
-        }
+        } */}
             </>
         ))}
-        
+         <img
+          className="w-full h-auto md:h-auto object-cover rounded-lg mb-5"
+          src={itemData.imageUrl}
+          alt="Event visual"
+        />
+         {/* Image Gallery */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
+        {itemData.images?.map((imageUrl: string, index: number) => (
+          <div key={index} className="text-center md:self-end">
+            <img
+              src={imageUrl}
+              alt={`Project image ${index + 1}`}
+              className="rounded-lg h-auto md:h-80 w-full md:w-auto mx-auto mb-4 object-cover"
+            />
+          </div>
+        ))}
+        </div>
       </div>
-      <Event />
+      <PWHD />
+      <Volunteer />
+      {/* <Event /> */}
     </main>
   );
 };

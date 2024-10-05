@@ -87,23 +87,33 @@ const Footer: React.FC = () => {
             <h3 className="text-sm font-bold">Connect</h3>
             <ul>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  Facebook
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <a
+                  href="https://www.instagram.com/fuf.africa?igsh=ZzBwcGwyYnA4azQw"
+                  className="text-gray-400 hover:text-white"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Instagram
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  Twitter
+                <a
+                  href="https://linkedin.com/posts/fuf-africa_health-impact-activity-7237116225019883521-G85r?utm_source=share&utm_medium=member_ios"
+                  className="text-gray-400 hover:text-white"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LinkedIn
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  LinkedIn
+                <a
+                  href="https://x.com/fuf_africa?s=21&t=uw45wc9e-FX0H6bdKy6oQA"
+                  className="text-gray-400 hover:text-white"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Twitter
                 </a>
               </li>
             </ul>

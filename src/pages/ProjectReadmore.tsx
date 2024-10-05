@@ -1,6 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import PWHD from "../components/ProjectsWeHaveDone";
+import Volunteer from "../components/Volunteer";
 
 interface Item {
   title: string;
@@ -73,6 +74,7 @@ const ProjectReadmore: React.FC = () => {
         ))}
       </div>
       <PWHD />
+      <Volunteer />
     </section>
   );
 };
