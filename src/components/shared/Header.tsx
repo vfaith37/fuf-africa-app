@@ -1,9 +1,10 @@
 import { getDownloadURL, ref } from "firebase/storage";
 import React, { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { storage } from "../../config/firebase";
 
 const Header: React.FC = () => {
+  const navigation = useNavigate();
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const [imageUrl, setImageUrl] = useState<string>("");
@@ -35,7 +36,7 @@ const Header: React.FC = () => {
   return (
     <header className="bg-white shadow-md font-Roboto">
       <div className="container mx-auto flex justify-between items-center px-4">
-        <div className="text-xl font-bold">
+        <div className="text-xl font-bold cursor-pointer" onClick={()=>{navigation("/")}}>
           <img
             src={imageUrl}
             alt="fuf-africa"
