@@ -83,7 +83,9 @@ const Volunteer: React.FC = () => {
           loadingImage ? "bg-gray-200 animate-pulse" : "bg-cover"
         }`}
         style={{
-          backgroundImage: !loadingImage ? `url(${backgroundImageUrl})` : "none",
+          backgroundImage: !loadingImage
+            ? `url(${backgroundImageUrl})`
+            : "none",
         }}
       >
         {loadingImage && (
@@ -93,7 +95,8 @@ const Volunteer: React.FC = () => {
         {!loadingImage && (
           <>
             <p className="font-bold text-4xl text-center mb-4 w-auto">
-              You can contribute to provide a place for children with special needs!
+              You can contribute to provide a place for children with special
+              needs!
             </p>
             <div className="flex text-black gap-6">
               <button
@@ -164,6 +167,12 @@ const Volunteer: React.FC = () => {
                 {loading ? "Submitting..." : "Submit"}
               </button>
             </form>
+            <button
+              onClick={() => setShowModal(false)}
+              className="text-[#F2C94C] bg-black px-4 py-2 rounded font-medium mt-3 self-end"
+            >
+              Close
+            </button>
           </div>
         </Modal>
       )}

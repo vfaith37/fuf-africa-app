@@ -8,9 +8,11 @@ import Event from "../components/Events";
 import PWHD from "../components/ProjectsWeHaveDone";
 import { storage } from "../config/firebase";
 import { getDownloadURL, ref } from "firebase/storage";
+import { useNavigate } from "react-router-dom";
 
 const Home: React.FC = () => {
   const [imageUrl, setImageUrl] = useState<string>("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Create a reference to the image in Firebase Storage
@@ -47,7 +49,7 @@ const Home: React.FC = () => {
                 cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus
                 tristique posuere.
               </p> */}
-            <button className="bg-[#F2C94C] p-3 rounded-sm font-medium">
+            <button className="bg-[#F2C94C] p-3 rounded-sm font-medium" onClick={()=>{navigate("about")}}>
               Learn more
             </button>
           </div>

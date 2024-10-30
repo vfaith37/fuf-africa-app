@@ -42,13 +42,17 @@ export const events: Event[] = [
       "In addition to these activities, the outreach emphasized community involvement, encouraging parents, teachers, and local authorities to take a proactive role in advocating for the rights and needs of children with special needs. FUF Africa's goal was to create a supportive space where the voices of children with autism and other disabilities could be heard, valued, and uplifted.",
       "This event marked an important step in FUF Africa’s mission to break down stigmas associated with autism and disabilities, advocating for inclusive education and equal opportunities for all children.",
     ],
-    imageUrl:
-      "https://img.freepik.com/free-photo/pleased-looking-side-young-african-american-male-hat-wearing-green-shirt-isoloated-white-background_141793-138920.jpg?t=st=1723810482~exp=1723814082~hmac=6657cb9e7956a588ed788e50d4cfcfe2a584470e667ea51cbef179f1bfdc2482&w=1380",
+    imageUrl: "autism/ADP_6814.jpg",
     images: [
-      "https://img.freepik.com/free-photo/medium-shot-smiley-african-boys_23-2148860433.jpg?t=st=1726655940~exp=1726659540~hmac=9c66cce123abc322d58625aa14d7891391ecd9b197c6ff7e68219ee5bc18bd74&w=1380",
-      "https://img.freepik.com/free-photo/medium-shot-smiley-african-boys_23-2148860433.jpg?t=st=1726655940~exp=1726659540~hmac=9c66cce123abc322d58625aa14d7891391ecd9b197c6ff7e68219ee5bc18bd74&w=1380",
-      "https://img.freepik.com/free-photo/medium-shot-smiley-african-boys_23-2148860433.jpg?t=st=1726655940~exp=1726659540~hmac=9c66cce123abc322d58625aa14d7891391ecd9b197c6ff7e68219ee5bc18bd74&w=1380",
-      "https://img.freepik.com/free-photo/medium-shot-smiley-african-boys_23-2148860433.jpg?t=st=1726655940~exp=1726659540~hmac=9c66cce123abc322d58625aa14d7891391ecd9b197c6ff7e68219ee5bc18bd74&w=1380",
+      "autism/ADP_6884.jpg",
+      "autism/ADP_6774.jpg",
+      "autism/ADP_6770.jpg",
+      "autism/ADP_6779.jpg",
+      "autism/ADP_6902.jpg",
+      "autism/ADP_6795.jpg",
+      "autism/ADP_6802.jpg",
+      "autism/ADP_6799.jpg",
+      "autism/ADP_6781.jpg",
     ],
   },
   {
@@ -61,13 +65,17 @@ export const events: Event[] = [
       "Et morbi vitae lobortis nam odio. Faucibus vitae vel neque nullam in in lorem platea mattis. Euismod aenean rhoncus scelerisque amet tincidunt scelerisque aliquam. Luctus porttitor elit vel sapien, accumsan et id ut est. Posuere molestie in turpis quam. Scelerisque in viverra mi ut quisque. In sollicitudin sapien, vel nulla quisque vitae. Scelerisque eget accumsan, non in. Posuere magna erat bibendum amet, nisi eu id.",
       "Viverra at diam nunc non ornare. Sed ultricies pulvinar nunc, lacus sem. Tellus aliquam ut euismod cursus dui lectus. Ut amet, cras volutpat dui. A bibendum viverra eu cras. Mauris morbi sed dignissim a in nec aliquam fringilla et. Mattis elit dignissim nibh sit. Donec arcu sed elit scelerisque tempor ornare tristique. Integer faucibus duis praesent tempor feugiat ornare in. Erat libero egestas porttitor nunc pellentesque mauris et pulvinar eget.",
     ],
-    imageUrl:
-      "https://img.freepik.com/free-photo/pleased-looking-side-young-african-american-male-hat-wearing-green-shirt-isoloated-white-background_141793-138920.jpg?t=st=1723810482~exp=1723814082~hmac=6657cb9e7956a588ed788e50d4cfcfe2a584470e667ea51cbef179f1bfdc2482&w=1380",
+    imageUrl: "autism/ADP_6814.jpg",
     images: [
-      "https://img.freepik.com/free-photo/medium-shot-smiley-african-boys_23-2148860433.jpg?t=st=1726655940~exp=1726659540~hmac=9c66cce123abc322d58625aa14d7891391ecd9b197c6ff7e68219ee5bc18bd74&w=1380",
-      "https://img.freepik.com/free-photo/medium-shot-smiley-african-boys_23-2148860433.jpg?t=st=1726655940~exp=1726659540~hmac=9c66cce123abc322d58625aa14d7891391ecd9b197c6ff7e68219ee5bc18bd74&w=1380",
-      "https://img.freepik.com/free-photo/medium-shot-smiley-african-boys_23-2148860433.jpg?t=st=1726655940~exp=1726659540~hmac=9c66cce123abc322d58625aa14d7891391ecd9b197c6ff7e68219ee5bc18bd74&w=1380",
-      "https://img.freepik.com/free-photo/medium-shot-smiley-african-boys_23-2148860433.jpg?t=st=1726655940~exp=1726659540~hmac=9c66cce123abc322d58625aa14d7891391ecd9b197c6ff7e68219ee5bc18bd74&w=1380",
+      "autism/ADP_6884.jpg",
+      "autism/ADP_6774.jpg",
+      "autism/ADP_6770.jpg",
+      "autism/ADP_6779.jpg",
+      "autism/ADP_6902.jpg",
+      "autism/ADP_6795.jpg",
+      "autism/ADP_6802.jpg",
+      "autism/ADP_6799.jpg",
+      "autism/ADP_6781.jpg",
     ],
   },
 ];
@@ -143,7 +151,7 @@ export const scrollData = [
     paragraphs: [
       "The Pad-A-Girl Initiative is a transformative outreach program currently active in 14 Nigerian universities, aimed at addressing menstrual health and hygiene for young girls. The initiative provides free sanitary pads to female students, helping to eliminate poor menstrual hygiene, which often leads to health issues and absenteeism from school.",
       "Alongside distributing sanitary pads, the program also focuses on educating young girls about menstrual health, breaking the stigma around menstruation, and fostering open conversations about related issues. Through workshops and seminars, participants learn about proper menstrual care, the importance of hygiene, and how to manage their menstrual cycle with dignity and confidence.",
-      "By tackling the challenges surrounding menstrual health, the Pad-A-Girl Initiative empowers young girls to stay in school, maintain good health, and build self-esteem, ensuring that menstruation doesn’t become a barrier to their education and overall well-being."
+      "By tackling the challenges surrounding menstrual health, the Pad-A-Girl Initiative empowers young girls to stay in school, maintain good health, and build self-esteem, ensuring that menstruation doesn’t become a barrier to their education and overall well-being.",
     ],
     images: [
       "https://img.freepik.com/free-photo/medium-shot-smiley-african-boys_23-2148860433.jpg?t=st=1726655940~exp=1726659540~hmac=9c66cce123abc322d58625aa14d7891391ecd9b197c6ff7e68219ee5bc18bd74&w=1380",

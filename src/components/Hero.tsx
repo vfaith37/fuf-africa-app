@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { fetchImageUrl } from "../utils/storageUtils";
 import { FaRegCirclePlay } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 
 const Hero: React.FC = () => {
   const [backgroundImageUrl, setBackgroundImageUrl] = useState<string>("");
-
+const navigate = useNavigate();
   useEffect(() => {
     const loadImage = async () => {
       const url = await fetchImageUrl("IMG_7066.jpg");
@@ -28,7 +29,7 @@ const Hero: React.FC = () => {
         We Spread Compassion, We Create Smiles
       </h1>
       <div className="mt-8 space-x-4">
-        <button className="bg-white text-black px-4 py-2 rounded">
+        <button className="bg-white text-black px-4 py-2 rounded" onClick={()=>{navigate("what-we-do")}}>
           What We Do
         </button>
         <button className="text-white px-4 py-2">

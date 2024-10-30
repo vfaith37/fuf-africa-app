@@ -1,57 +1,57 @@
 // src/pages/About.tsx
 import React, { useEffect, useRef, useState } from "react";
-import { FaFacebook, FaXTwitter, FaLinkedin } from "react-icons/fa6";
+// import { FaFacebook, FaXTwitter, FaLinkedin } from "react-icons/fa6";
 import Event from "../components/Events";
 import { fetchImageUrl } from "../utils/storageUtils";
 import Volunteer from "../components/Volunteer";
 
-interface TeamMember {
-  name: string;
-  position: string;
-  imageUrl: string;
-  facebookUrl: string;
-  twitterUrl: string;
-  linkedinUrl: string;
-}
+// interface TeamMember {
+//   name: string;
+//   position: string;
+//   imageUrl: string;
+//   facebookUrl: string;
+//   twitterUrl: string;
+//   linkedinUrl: string;
+// }
 
-const initialTeamMembers: TeamMember[] = [
-  {
-    name: "John Doe",
-    position: "Software Engineer",
-    imageUrl: "ADP_7008.jpg",
-    facebookUrl: "https://facebook.com/johndoe",
-    twitterUrl: "https://twitter.com/johndoe",
-    linkedinUrl: "https://linkedin.com/in/johndoe",
-  },
-  {
-    name: "Jane Doe",
-    position: "Software Engineer",
-    imageUrl: "IMG_6749.jpg",
-    facebookUrl: "https://facebook.com/johndoe",
-    twitterUrl: "https://twitter.com/johndoe",
-    linkedinUrl: "https://linkedin.com/in/johndoe",
-  },
-  {
-    name: "James Dane",
-    position: "Software Engineer",
-    imageUrl: "ADP_7008.jpg",
-    facebookUrl: "https://facebook.com/johndoe",
-    twitterUrl: "https://twitter.com/johndoe",
-    linkedinUrl: "https://linkedin.com/in/johndoe",
-  },
-  {
-    name: "Jane Smith",
-    position: "Project Manager",
-    imageUrl: "IMG_6749.jpg",
-    facebookUrl: "https://facebook.com/janesmith",
-    twitterUrl: "https://twitter.com/janesmith",
-    linkedinUrl: "https://linkedin.com/in/janesmith",
-  },
-];
+// const initialTeamMembers: TeamMember[] = [
+//   {
+//     name: "John Doe",
+//     position: "Software Engineer",
+//     imageUrl: "ADP_7008.jpg",
+//     facebookUrl: "https://facebook.com/johndoe",
+//     twitterUrl: "https://twitter.com/johndoe",
+//     linkedinUrl: "https://linkedin.com/in/johndoe",
+//   },
+//   {
+//     name: "Jane Doe",
+//     position: "Software Engineer",
+//     imageUrl: "IMG_6749.jpg",
+//     facebookUrl: "https://facebook.com/johndoe",
+//     twitterUrl: "https://twitter.com/johndoe",
+//     linkedinUrl: "https://linkedin.com/in/johndoe",
+//   },
+//   {
+//     name: "James Dane",
+//     position: "Software Engineer",
+//     imageUrl: "ADP_7008.jpg",
+//     facebookUrl: "https://facebook.com/johndoe",
+//     twitterUrl: "https://twitter.com/johndoe",
+//     linkedinUrl: "https://linkedin.com/in/johndoe",
+//   },
+//   {
+//     name: "Jane Smith",
+//     position: "Project Manager",
+//     imageUrl: "IMG_6749.jpg",
+//     facebookUrl: "https://facebook.com/janesmith",
+//     twitterUrl: "https://twitter.com/janesmith",
+//     linkedinUrl: "https://linkedin.com/in/janesmith",
+//   },
+// ];
 
 const About: React.FC = () => {
-  const [teamMembers, setTeamMembers] =
-    useState<TeamMember[]>(initialTeamMembers);
+  // const [teamMembers, setTeamMembers] =
+  //   useState<TeamMember[]>(initialTeamMembers);
   const [sectionBackgroundImageUrl, setSectionBackgroundImageUrl] =
     useState<string>("");
   const iframeRef = useRef<HTMLIFrameElement>(null);
@@ -62,13 +62,13 @@ const About: React.FC = () => {
 
       if (sectionImageUrl) setSectionBackgroundImageUrl(sectionImageUrl);
 
-      const updatedTeamMembers = await Promise.all(
-        initialTeamMembers.map(async (member) => {
-          const imageUrl = await fetchImageUrl(member.imageUrl);
-          return { ...member, imageUrl: imageUrl || member.imageUrl };
-        })
-      );
-      setTeamMembers(updatedTeamMembers);
+      // const updatedTeamMembers = await Promise.all(
+      //   initialTeamMembers.map(async (member) => {
+      //     const imageUrl = await fetchImageUrl(member.imageUrl);
+      //     return { ...member, imageUrl: imageUrl || member.imageUrl };
+      //   })
+      // );
+      // setTeamMembers(updatedTeamMembers);
     };
 
     loadImages();
@@ -197,7 +197,7 @@ const About: React.FC = () => {
           />
         </div>
       </section>
-      <section className="py-11 px-11 mb-16 text-[#1D2130]">
+      {/* <section className="py-11 px-11 mb-16 text-[#1D2130]">
         <h1 className="font-bold text-5xl text-center mb-4">Meet our team</h1>
         <p className="font-normal text-base text-center mb-14">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
@@ -239,7 +239,7 @@ const About: React.FC = () => {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
       <Volunteer />
       <Event />
     </div>
