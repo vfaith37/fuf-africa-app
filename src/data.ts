@@ -59,7 +59,7 @@ export const events: Event[] = [
   {
     id: 2,
     title: "PAD-A-GIRL INITIATIVE",
-    location: "Opp Opolo round about, Yenagoa, Bayelsa, Nigeria",
+    location: "Lagos, Nigeria",
     theme: "",
     date: "April 13, 2022 8:30 AM",
     description: [

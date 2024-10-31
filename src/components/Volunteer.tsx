@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { fetchImageUrl } from "../utils/storageUtils";
 import { useNavigate } from "react-router-dom";
-import Modal from "./Modal";
-import { addDoc, collection } from "firebase/firestore";
-import { db } from "../config/firebase";
+// import Modal from "./Modal";
+// import { addDoc, collection } from "firebase/firestore";
+// import { db } from "../config/firebase";
 
 const Volunteer: React.FC = () => {
   const [backgroundImageUrl, setBackgroundImageUrl] = useState<string>("");
   const [loadingImage, setLoadingImage] = useState<boolean>(true); // Loading state for the image
-  const [showModal, setShowModal] = useState<boolean>(false);
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phoneNumber: "",
-  });
-  const [loading, setLoading] = useState<boolean>(false);
-  const [error, setError] = useState<string>("");
+  // const [showModal, setShowModal] = useState<boolean>(false);
+  // const [formData, setFormData] = useState({
+  //   firstName: "",
+  //   lastName: "",
+  //   email: "",
+  //   phoneNumber: "",
+  // });
+  // const [loading, setLoading] = useState<boolean>(false);
+  // const [error, setError] = useState<string>("");
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -36,44 +36,44 @@ const Volunteer: React.FC = () => {
   }, []);
 
   // Handle form input changes
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+  // const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   setFormData({ ...formData, [e.target.name]: e.target.value });
+  // };
 
   // Submit form data to Firestore
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
+  // const handleSubmit = async (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   setLoading(true);
 
-    const { firstName, lastName, email, phoneNumber } = formData;
-    if (!firstName || !lastName || !email || !phoneNumber) {
-      setError("All fields are required");
-      setLoading(false);
-      return;
-    }
+  //   const { firstName, lastName, email, phoneNumber } = formData;
+  //   if (!firstName || !lastName || !email || !phoneNumber) {
+  //     setError("All fields are required");
+  //     setLoading(false);
+  //     return;
+  //   }
 
-    try {
-      const docRef = await addDoc(collection(db, "volunteers"), {
-        firstName,
-        lastName,
-        email,
-        phoneNumber,
-        createdAt: new Date(),
-      });
-      console.log("Document written with ID: ", docRef.id);
-      setLoading(false);
-      setShowModal(false);
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phoneNumber: "",
-      });
-    } catch (error) {
-      console.error("Error adding document: ", error);
-      setLoading(false);
-    }
-  };
+  //   try {
+  //     const docRef = await addDoc(collection(db, "volunteers"), {
+  //       firstName,
+  //       lastName,
+  //       email,
+  //       phoneNumber,
+  //       createdAt: new Date(),
+  //     });
+  //     console.log("Document written with ID: ", docRef.id);
+  //     setLoading(false);
+  //     setShowModal(false);
+  //     setFormData({
+  //       firstName: "",
+  //       lastName: "",
+  //       email: "",
+  //       phoneNumber: "",
+  //     });
+  //   } catch (error) {
+  //     console.error("Error adding document: ", error);
+  //     setLoading(false);
+  //   }
+  // };
 
   return (
     <section className="flex flex-col justify-center items-center text-white px-4 md:px-16 h-96 mb-16 my-20 md:my-24">
@@ -99,12 +99,14 @@ const Volunteer: React.FC = () => {
               needs!
             </p>
             <div className="flex text-black gap-6">
-              <button
+              <a
                 className="bg-[#F2C94C] px-4 py-2 rounded-sm font-medium"
-                onClick={() => setShowModal(true)}
+                href="#"
+                target="blank"
+                // onClick={() => setShowModal(true)}
               >
                 Join as a volunteer
-              </button>
+              </a>
               <button
                 className="bg-white px-4 py-2 rounded-sm font-medium"
                 onClick={() => navigate("/donate")}
@@ -117,7 +119,7 @@ const Volunteer: React.FC = () => {
       </div>
 
       {/* Modal for volunteer form */}
-      {showModal && (
+      {/* {showModal && (
         <Modal>
           <div className="bg-white p-6 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">Join as a Volunteer</h2>
@@ -175,7 +177,7 @@ const Volunteer: React.FC = () => {
             </button>
           </div>
         </Modal>
-      )}
+      )} */}
     </section>
   );
 };
