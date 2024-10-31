@@ -27,6 +27,7 @@ type Event = {
   description: string[];
   imageUrl: string;
   images?: string[];
+  list?: string[];
 };
 
 export const events: Event[] = [
@@ -62,20 +63,36 @@ export const events: Event[] = [
     theme: "",
     date: "April 13, 2022 8:30 AM",
     description: [
-      "Et morbi vitae lobortis nam odio. Faucibus vitae vel neque nullam in in lorem platea mattis. Euismod aenean rhoncus scelerisque amet tincidunt scelerisque aliquam. Luctus porttitor elit vel sapien, accumsan et id ut est. Posuere molestie in turpis quam. Scelerisque in viverra mi ut quisque. In sollicitudin sapien, vel nulla quisque vitae. Scelerisque eget accumsan, non in. Posuere magna erat bibendum amet, nisi eu id.",
-      "Viverra at diam nunc non ornare. Sed ultricies pulvinar nunc, lacus sem. Tellus aliquam ut euismod cursus dui lectus. Ut amet, cras volutpat dui. A bibendum viverra eu cras. Mauris morbi sed dignissim a in nec aliquam fringilla et. Mattis elit dignissim nibh sit. Donec arcu sed elit scelerisque tempor ornare tristique. Integer faucibus duis praesent tempor feugiat ornare in. Erat libero egestas porttitor nunc pellentesque mauris et pulvinar eget.",
+      "Menstrual hygiene is a huge problem in Nigeria & Africa. Unfortunately, menstruation is a subject that still largely remains a taboo. It is not a subject that is openly discussed. Hence, the scale of the problem and it's devastating impact are less known. The effort of the government and a few individuals alone will not suffice.",
+      "It requires contribution by the whole civil society. So we have partnered with 12 medical associations in 6 states of south west nigeria in other to achieve this goal which are:",
     ],
-    imageUrl: "autism/ADP_6814.jpg",
+    list: [
+      "Babcock University",
+      "Olabisi Onabanjo university",
+      "Ladoke Akintola University",
+      "University of Lagos",
+      "Afe Babalola University",
+      "Federal university of technology,Akure",
+      "Eko university",
+      "Lagos state university",
+      "Obafemi Awolowo university",
+      "Ilorin university",
+      "Bowen university",
+      "Ekiti state university",
+      "Osun state university",
+      "University of medical sciences Kwara state",
+    ],
+    imageUrl: "pad-a-girl/PadAGirl.jpeg",
     images: [
-      "autism/ADP_6884.jpg",
-      "autism/ADP_6774.jpg",
-      "autism/ADP_6770.jpg",
-      "autism/ADP_6779.jpg",
-      "autism/ADP_6902.jpg",
-      "autism/ADP_6795.jpg",
-      "autism/ADP_6802.jpg",
-      "autism/ADP_6799.jpg",
-      "autism/ADP_6781.jpg",
+      "pad-a-girl/IMG_7501.jpg",
+      "pad-a-girl/IMG_7535.jpg",
+      "pad-a-girl/IMG_7625.jpg",
+      "pad-a-girl/IMG_7549.jpg",
+      "pad-a-girl/IMG_7600.jpg",
+      "pad-a-girl/IMG_7672.jpg",
+      "pad-a-girl/IMG_7708.jpg",
+      "pad-a-girl/IMG_7717.jpg",
+      "pad-a-girl/IMG_7621.jpg",
     ],
   },
 ];

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaLocationDot, FaRegCalendar } from "react-icons/fa6";
 import { useLocation } from "react-router-dom";
-import PWHD from "../components/ProjectsWeHaveDone";
+// import PWHD from "../components/ProjectsWeHaveDone";
 import Volunteer from "../components/Volunteer";
 import { getImageUrl } from "../function/getImage";
 
@@ -12,6 +12,7 @@ interface EventData {
   description: string[];
   imageUrl: string;
   images: string[];
+  list?: string[]
 }
 
 interface LocationState {
@@ -117,12 +118,23 @@ const EventReadmore: React.FC = () => {
             ))}
           </div>
 
+          <div className="space-y-2 mt-4">
+            {item.list && item.list.map((list, index) => (
+              <p
+                key={index}
+                className="font-Roboto text-base text-[#525560] font-normal leading-relaxed"
+              >
+                {list}{item.list?.length !== index + 1 ? "," : "."}
+              </p>
+            ))}
+          </div>
+
           {/* Main Image */}
           {isLoading ? (
             <div className="animate-pulse bg-gray-200 w-full h-96 rounded-lg mt-8" />
           ) : mainImage && (
             <img
-              className="w-full h-auto md:h-[500px] object-cover rounded-lg mt-8"
+              className="w-full h-auto md:h-[500px] object-contain rounded-lg mt-8"
               src={mainImage}
               alt={item.title}
             />
@@ -153,7 +165,7 @@ const EventReadmore: React.FC = () => {
       </div>
 
       {/* Additional Components */}
-      <PWHD />
+      {/* <PWHD /> */}
       <Volunteer />
     </main>
   );

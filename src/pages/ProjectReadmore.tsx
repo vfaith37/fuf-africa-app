@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import PWHD from "../components/ProjectsWeHaveDone";
+// import PWHD from "../components/ProjectsWeHaveDone";
 import Volunteer from "../components/Volunteer";
 import { scrollData } from "../data";
 
@@ -15,8 +15,8 @@ interface Item {
 const ProjectReadmore: React.FC = () => {
   // Caleb - (Im fetching the data directly from data.ts instead of from the PWHD component)
   const location = useLocation();
-  const id: any = location.pathname[18]; //sorry guy im using this to find out the id of the item
-  const item = scrollData[id - 1]; //this is now the item we are looking for
+  const id = location.pathname[18]; //sorry guy im using this to find out the id of the item
+  const item = scrollData[Number(id) - 1]; //this is now the item we are looking for
 
   // const { item } = location.state || {}; // Extract the item data
 
@@ -81,7 +81,7 @@ const ProjectReadmore: React.FC = () => {
           </div>
         ))}
       </div>
-      <PWHD />
+      {/* <PWHD /> */}
       <Volunteer />
     </section>
   );
