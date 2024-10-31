@@ -98,6 +98,16 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <a
+                  href="https://www.tiktok.com/@fufafrica?_t=8r0oq3gR5pm&_r=1"
+                  className="text-gray-400 hover:text-white"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Tiktok
+                </a>
+              </li>
+              <li>
+                <a
                   href="https://linkedin.com/posts/fuf-africa_health-impact-activity-7237116225019883521-G85r?utm_source=share&utm_medium=member_ios"
                   className="text-gray-400 hover:text-white"
                   target="_blank"

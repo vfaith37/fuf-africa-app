@@ -1,5 +1,5 @@
 import React from "react";
-import { FaInstagram, FaXTwitter, FaLinkedin } from "react-icons/fa6";
+import { FaInstagram, FaXTwitter, FaLinkedin, FaTiktok } from "react-icons/fa6";
 import ContactForm from "../components/ContactForm";
 // import MapView from "./MapView";
 
@@ -47,6 +47,15 @@ const Contact: React.FC = () => {
             >
               <FaInstagram className="w-7 h-7" />
               <span className="sr-only">Instagram</span>
+            </a>
+            <a
+              href="https://www.tiktok.com/@fufafrica?_t=8r0oq3gR5pm&_r=1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#1D2130] hover:text-[#0c090a] transition-colors duration-300"
+            >
+              <FaTiktok className="w-7 h-7" />
+              <span className="sr-only">Tiktok</span>
             </a>
             <a
               href="https://x.com/fuf_africa?s=21&t=uw45wc9e-FX0H6bdKy6oQA"
