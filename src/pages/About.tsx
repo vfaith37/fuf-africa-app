@@ -23,7 +23,7 @@ const About: React.FC = () => {
 
   useEffect(() => {
     const loadImages = async () => {
-      const imageUrl = await fetchImageUrl('IMG_6753.jpg');
+      const imageUrl = await fetchImageUrl('journey.jpeg');
       if (imageUrl) setSectionBackgroundImageUrl(imageUrl);
     };
 

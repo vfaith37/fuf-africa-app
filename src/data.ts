@@ -36,9 +36,9 @@ export const events: Event[] = [
     title: "Autistic people inclusiveness",
     location: "Opp Opolo round about, Yenagoa, Bayelsa, Nigeria",
     theme: "Empowering Autistic Voices",
-    date: "March 03, 2024 8:30 AM",
+    date: "April 28, 2024",
     description: [
-      'On March 2nd, 2024, FUF Africa hosted an impactful event themed "Empowering Autistic Voices" at a school for children with special needs in Sagamu. This outreach was dedicated to raising awareness about autism and other disabilities, focusing on acknowledging the unique challenges these children face while celebrating their individuality and strengths.',
+      'On April 28th, 2024, FUF Africa hosted an impactful event themed "Empowering Autistic Voices" at a school for children with special needs in Sagamu. This outreach was dedicated to raising awareness about autism and other disabilities, focusing on acknowledging the unique challenges these children face while celebrating their individuality and strengths.',
       "The event featured interactive sessions with the children, including therapeutic activities like art and music, designed to help them express themselves in creative ways. There were also discussions with educators and caregivers on strategies for enhancing learning environments for children with autism and other disabilities. Experts in the field provided insights on effective ways to support these children, focusing on inclusivity and empowerment.",
       "In addition to these activities, the outreach emphasized community involvement, encouraging parents, teachers, and local authorities to take a proactive role in advocating for the rights and needs of children with special needs. FUF Africa's goal was to create a supportive space where the voices of children with autism and other disabilities could be heard, valued, and uplifted.",
       "This event marked an important step in FUF Africa’s mission to break down stigmas associated with autism and disabilities, advocating for inclusive education and equal opportunities for all children.",
@@ -61,7 +61,7 @@ export const events: Event[] = [
     title: "PAD-A-GIRL INITIATIVE",
     location: "Lagos, Nigeria",
     theme: "",
-    date: "April 13, 2022 8:30 AM",
+    date: "May, 2024",
     description: [
       "Menstrual hygiene is a huge problem in Nigeria & Africa. Unfortunately, menstruation is a subject that still largely remains a taboo. It is not a subject that is openly discussed. Hence, the scale of the problem and it's devastating impact are less known. The effort of the government and a few individuals alone will not suffice.",
       "It requires contribution by the whole civil society. So we have partnered with 12 medical associations in 6 states of south west nigeria in other to achieve this goal which are:",
@@ -148,7 +148,7 @@ export const scrollData = [
     title: "Autism Outreach",
     theme: "“Empowering Autistic Voices”",
     paragraphs: [
-      'On March 2nd, 2024, FUF Africa hosted an impactful event themed "Empowering Autistic Voices" at a school for children with special needs in Sagamu. This outreach was dedicated to raising awareness about autism and other disabilities, focusing on acknowledging the unique challenges these children face while celebrating their individuality and strengths.',
+      'On April 28th, 2024, FUF Africa hosted an impactful event themed "Empowering Autistic Voices" at a school for children with special needs in Sagamu. This outreach was dedicated to raising awareness about autism and other disabilities, focusing on acknowledging the unique challenges these children face while celebrating their individuality and strengths.',
       "The event featured interactive sessions with the children, including therapeutic activities like art and music, designed to help them express themselves in creative ways. There were also discussions with educators and caregivers on strategies for enhancing learning environments for children with autism and other disabilities. Experts in the field provided insights on effective ways to support these children, focusing on inclusivity and empowerment.",
       "In addition to these activities, the outreach emphasized community involvement, encouraging parents, teachers, and local authorities to take a proactive role in advocating for the rights and needs of children with special needs. FUF Africa's goal was to create a supportive space where the voices of children with autism and other disabilities could be heard, valued, and uplifted.",
       "This event marked an important step in FUF Africa’s mission to break down stigmas associated with autism and disabilities, advocating for inclusive education and equal opportunities for all children.",

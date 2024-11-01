@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { FaLocationDot, FaRegCalendar } from "react-icons/fa6";
+// import { FaLocationDot, FaRegCalendar } from "react-icons/fa6";
 import { useLocation } from "react-router-dom";
 // import PWHD from "../components/ProjectsWeHaveDone";
 import Volunteer from "../components/Volunteer";
@@ -86,7 +86,7 @@ const EventReadmore: React.FC = () => {
           <h1 className="text-[#1D2130] font-Roboto font-bold text-4xl md:text-6xl mb-8 md:mb-12">
             {item.title}
           </h1>
-          <div className="flex flex-wrap gap-5">
+          {/* <div className="flex flex-wrap gap-5">
             <div className="flex items-center gap-3">
               <FaLocationDot className="text-gray-600" />
               <span className="text-gray-800">{item.location}</span>
@@ -95,7 +95,7 @@ const EventReadmore: React.FC = () => {
               <FaRegCalendar className="text-gray-600" />
               <span className="text-gray-800">{item.date}</span>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 

@@ -21,7 +21,7 @@ const Volunteer: React.FC = () => {
 
   useEffect(() => {
     const loadImage = async () => {
-      const url = await fetchImageUrl("IMG_6742.jpg");
+      const url = await fetchImageUrl("volunteer.jpeg");
       if (url) {
         const img = new Image();
         img.src = url;

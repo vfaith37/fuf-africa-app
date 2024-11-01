@@ -1,5 +1,12 @@
 import React from "react";
-import { FaInstagram, FaXTwitter, FaLinkedin, FaTiktok } from "react-icons/fa6";
+import {
+  FaInstagram,
+  FaXTwitter,
+  FaLinkedin,
+  FaTiktok,
+  FaPhone,
+  FaEnvelopeCircleCheck,
+} from "react-icons/fa6";
 import ContactForm from "../components/ContactForm";
 // import MapView from "./MapView";
 
@@ -29,8 +36,18 @@ const Contact: React.FC = () => {
             <div className="text-[#1D2130] flex flex-col gap-8 md:gap-12 justify-center">
               <div className="space-y-2">
                 <p className="font-bold text-2xl md:text-3xl">Let's Talk!</p>
-                <p className="text-lg font-normal">+234 9038481215</p>
-                <p className="text-lg font-normal">info@fufafrica.org</p>
+                <p className="text-lg font-normal">
+                  <FaPhone /> +234 9038481215
+                </p>
+                <p className="text-lg font-normal">
+                  <FaEnvelopeCircleCheck />
+                  <a
+                    href="mailto:info@fufafrica.org"
+                    className="hover:underline text-lg"
+                  >
+                    info@fufafrica.org
+                  </a>
+                </p>
               </div>
               <div className="space-y-2">
                 <p className="font-bold text-2xl md:text-3xl">Head Office</p>
