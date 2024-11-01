@@ -16,7 +16,7 @@ const JOURNEY_STATS: JourneyStats[] = [
   { label: 'Outreaches', value: '10+', description: 'Outreaches' },
 ];
 
-const YOUTUBE_VIDEO_ID = 'p6k58cNKKII';
+const YOUTUBE_VIDEO_ID = 'IMzxInQWI_g';
 
 const About: React.FC = () => {
   const [sectionBackgroundImageUrl, setSectionBackgroundImageUrl] = useState<string>('');
