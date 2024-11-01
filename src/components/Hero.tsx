@@ -32,7 +32,7 @@ const navigate = useNavigate();
         <button className="bg-white text-black px-4 py-2 rounded" onClick={()=>{navigate("what-we-do")}}>
           What We Do
         </button>
-        <button className="text-white px-4 py-2">
+        <button className="text-white px-4 py-2" onClick={()=>{navigate("about")}}>
           <div className="items-center flex gap-2">
          <FaRegCirclePlay />
           Play Video
