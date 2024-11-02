@@ -36,7 +36,7 @@ const Event: React.FC = () => {
     <HorizontalScroll>
     <div className="flex space-x-4 py-4">
       {events.map((item) => 
-           { const { day, month } = extractDayAndMonth(item.date);
+           { const { day, month } = extractDayAndMonth(item.date || "");
             return(
         <div key={item.id} className="flex-none rounded-xl w-[300px] md:w-[500px] bg-[#F2C94C]"
         onClick={() => handleLearnMore(item.id)}>
