@@ -3,8 +3,11 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { addDoc, collection } from "firebase/firestore";
 import { db } from "../../config/firebase";
+import { useNavigate } from "react-router-dom";
 
 const Footer: React.FC = () => {
+  const navigate = useNavigate();
+
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -18,7 +21,7 @@ const Footer: React.FC = () => {
           email: values.email,
         });
         console.log("Email successfully added:", values.email);
-        resetForm(); // Reset the form after submission
+        resetForm();
       } catch (error) {
         console.error("Error adding email to Firestore:", error);
       }
@@ -29,56 +32,45 @@ const Footer: React.FC = () => {
     <footer className="bg-black text-white p-8">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
-          <h2 className="text-lg font-bold">FUF AFRICA</h2>
+          <h2 className="text-lg font-bold cursor-pointer" onClick={() => navigate("/")}>
+            FUF AFRICA
+          </h2>
         </div>
         <div className="grid grid-cols-3 gap-4">
           <div>
             <h3 className="text-sm font-bold">Home</h3>
             <ul>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <button
+                  onClick={() => navigate("/about")}
+                  className="text-gray-400 hover:text-white"
+                >
                   About us
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  Team
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  What we do
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-sm font-bold">More</h3>
-            <ul>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  Projects
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  Events
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <button
+                  onClick={() => navigate("/donate")}
+                  className="text-gray-400 hover:text-white"
+                >
                   Donate
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  Blog
-                </a>
+                <button
+                  onClick={() => navigate("/what-we-do")}
+                  className="text-gray-400 hover:text-white"
+                >
+                  What we do
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => navigate("/contact")}
+                  className="text-gray-400 hover:text-white"
+                >
+                  Contact
+                </button>
               </li>
             </ul>
           </div>
