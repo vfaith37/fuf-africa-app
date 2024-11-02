@@ -109,7 +109,7 @@ const Home: React.FC = () => {
       <Hero />
 
       {/* About Section */}
-      <section className="grid grid-cols-1 md:grid-cols-2 bg-[#FEF5E7] text-black px-5 md:px-10 py-10 md:py-16 xl:px-56 gap-8">
+      <section className="grid grid-cols-1 md:grid-cols-2 text-black px-5 md:px-10 py-10 md:py-16 xl:px-56 gap-8">
         <div>
           <div className="flex items-center gap-4">
             <div className="border border-black h-[1px] w-12" />
@@ -153,7 +153,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* About Founder */}
-      <section className="grid grid-cols-1 md:grid-cols-2 text-black px-5 md:px-10 py-10 md:py-16 xl:px-56 gap-8">
+      <section className="grid grid-cols-1 md:grid-cols-2 bg-[#FEF5E7] text-black px-5 md:px-10 py-10 md:py-16 xl:px-56 gap-8">
         <div>
           <div className="flex items-center gap-4">
             <div className="border border-black h-[1px] w-12" />
