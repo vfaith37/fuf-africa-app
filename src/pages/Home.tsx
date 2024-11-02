@@ -160,9 +160,9 @@ const Home: React.FC = () => {
           <div className="animate-pulse bg-gray-200 rounded-lg w-full h-full min-h-[400px]" />
         ) : (
           <img
-            className="w-auto h-full object-cover rounded-lg"
+           className="w-full h-auto md:h-full object-cover rounded-lg"
             src={imageUrls.secondary}
-            alt="About Francisco Udofia Foundation"
+            alt="About Francisco Udofia"
           />
         )}
       </section>
