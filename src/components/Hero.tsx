@@ -24,7 +24,7 @@ const navigate = useNavigate();
         backgroundImage: `url(${backgroundImageUrl})`,
       }}
     >
-      <div className="pl-4 md:pl-28 w-[447px] md:w-[600px] pt-8 md:pt-20">
+      <div className="pl-4 md:pl-28 w-[447px] md:w-[600px] pt-8 md:pt-24">
       <h1 className="text-5xl md:text-6xl font-bold">
         We Spread Compassion, We Create Smiles
       </h1>
@@ -40,11 +40,11 @@ const navigate = useNavigate();
         </button>
       </div>
       </div>
-      <div className="flex justify-between items-center px-4 pt-20 md:pt-0 md:mt-48">
+      {/* <div className="flex justify-between items-center px-4 pt-20 md:pt-0 md:mt-48">
         <h2 className="font-normal text-lg text-center w-64">230 children under our care</h2>
         <div className="w-full border border-white h-[1px]" />
         <h2 className="font-normal text-lg text-center w-64">58 donations collected</h2>
-      </div>
+      </div> */}
     </section>
   );
 };
