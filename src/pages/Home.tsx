@@ -108,65 +108,6 @@ const Home: React.FC = () => {
     <>
       <Hero />
 
-      {/* About Founder */}
-      <section className="grid grid-cols-1 md:grid-cols-2 text-black px-5 md:px-10 py-10 md:py-16 xl:px-56 gap-8">
-        <div>
-          <div className="flex items-center gap-4">
-            <div className="border border-black h-[1px] w-12" />
-            <p className="text-sm md:text-base font-bold">
-              KNOW ABOUT THE FOUNDER
-            </p>
-          </div>
-          <div className="pt-6 md:pt-8 px-2">
-            <h1 className="font-bold text-2xl md:text-3xl mb-4 md:mb-5">
-              FRANCISCO BIATUS UDOFIA
-            </h1>
-            <p className="font-normal font-Roboto text-sm md:text-base">
-              Francisco is a passionate change optimist. He holds
-              a certification as an international protocol consultant from the
-              United States institute of diplomacy and human rights and a degree
-              in International Law and Diplomacy and is a humanitarian activist
-              and public speaker dedicated to inspiring positive impact.He is an
-              origin of Akwa Ibom state , Nigeria ,through his humanitarian
-              service, he has paid JAMB fees for over 200 high school students
-              in South-South Nigeria (Niger delta region) and partnered with
-              various organizations for outreach initiatives. While at
-              university, he was part of the organizing team of the TEDBabcock
-              event in 2023, featuring outstanding speakers and attracting over
-              200 attendees with a 95% satisfaction rate. As the Director of
-              Transport and Ventures for the Babcock University Student
-              Association in 2022/2023, he renovated the Student Union building,
-              executed high-profile events, implemented a campus-wide recycling
-              program, and negotiated partnerships with ride-sharing services,
-              reducing transportation costs by 20%, among other achievements. He
-              also served as Vice President of the Babcock University
-              Entrepreneurship Association for 2023/2024 and the Director of
-              Works for the International Law and Diplomacy Student Association
-              in 2021/2022. With a strong belief in the power of collective
-              action, Francisco advocates for human rights, social justice, and
-              sustainable development. Through his speaking engagements and
-              activism, he empowers individuals and communities to drive
-              meaningful change and create a better world for all.
-            </p>
-            {/* <button
-              className="bg-[#F2C94C] p-3 rounded-sm font-medium hover:bg-[#e0b93d] transition-colors"
-              onClick={() => navigate("about")}
-            >
-              Learn more
-            </button> */}
-          </div>
-        </div>
-        {isLoading ? (
-          <div className="animate-pulse bg-gray-200 rounded-lg w-full h-full min-h-[400px]" />
-        ) : (
-          <img
-           className="w-full h-auto md:h-full object-cover rounded-lg"
-            src={imageUrls.secondary}
-            alt="About Francisco Udofia"
-          />
-        )}
-      </section>
-
       {/* About Section */}
       <section className="grid grid-cols-1 md:grid-cols-2 bg-[#FEF5E7] text-black px-5 md:px-10 py-10 md:py-16 xl:px-56 gap-8">
         <div>
@@ -207,6 +148,65 @@ const Home: React.FC = () => {
             className="w-full h-auto md:h-full object-cover rounded-lg"
             src={imageUrls.main}
             alt="About Francisco Udofia Foundation"
+          />
+        )}
+      </section>
+
+      {/* About Founder */}
+      <section className="grid grid-cols-1 md:grid-cols-2 text-black px-5 md:px-10 py-10 md:py-16 xl:px-56 gap-8">
+        <div>
+          <div className="flex items-center gap-4">
+            <div className="border border-black h-[1px] w-12" />
+            <p className="text-sm md:text-base font-bold">
+              KNOW ABOUT THE FOUNDER
+            </p>
+          </div>
+          <div className="pt-6 md:pt-8 px-2">
+            <h1 className="font-bold text-2xl md:text-3xl mb-4 md:mb-5">
+              FRANCISCO BIATUS UDOFIA
+            </h1>
+            <p className="font-normal font-Roboto text-sm md:text-base">
+              Francisco is a passionate change optimist. He holds a
+              certification as an international protocol consultant from the
+              United States institute of diplomacy and human rights and a degree
+              in International Law and Diplomacy and is a humanitarian activist
+              and public speaker dedicated to inspiring positive impact.He is an
+              origin of Akwa Ibom state , Nigeria ,through his humanitarian
+              service, he has paid JAMB fees for over 200 high school students
+              in South-South Nigeria (Niger delta region) and partnered with
+              various organizations for outreach initiatives. While at
+              university, he was part of the organizing team of the TEDBabcock
+              event in 2023, featuring outstanding speakers and attracting over
+              200 attendees with a 95% satisfaction rate. As the Director of
+              Transport and Ventures for the Babcock University Student
+              Association in 2022/2023, he renovated the Student Union building,
+              executed high-profile events, implemented a campus-wide recycling
+              program, and negotiated partnerships with ride-sharing services,
+              reducing transportation costs by 20%, among other achievements. He
+              also served as Vice President of the Babcock University
+              Entrepreneurship Association for 2023/2024 and the Director of
+              Works for the International Law and Diplomacy Student Association
+              in 2021/2022. With a strong belief in the power of collective
+              action, Francisco advocates for human rights, social justice, and
+              sustainable development. Through his speaking engagements and
+              activism, he empowers individuals and communities to drive
+              meaningful change and create a better world for all.
+            </p>
+            {/* <button
+              className="bg-[#F2C94C] p-3 rounded-sm font-medium hover:bg-[#e0b93d] transition-colors"
+              onClick={() => navigate("about")}
+            >
+              Learn more
+            </button> */}
+          </div>
+        </div>
+        {isLoading ? (
+          <div className="animate-pulse bg-gray-200 rounded-lg w-full h-full min-h-[400px]" />
+        ) : (
+          <img
+            className="w-full h-auto md:h-full object-cover rounded-lg"
+            src={imageUrls.secondary}
+            alt="About Francisco Udofia"
           />
         )}
       </section>
