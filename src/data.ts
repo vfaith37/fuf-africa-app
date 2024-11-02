@@ -99,7 +99,7 @@ export const events: Event[] = [
     title: "Health hygiene outreach",
     location: "Uyo ,Akwa Ibom state",
     theme: "Empowering Autistic Voices",
-    date: "17th October,2024",
+    date: "October 17th, 2024",
     description: [
       "The Francisco Udofia Foundation Africa and the Big Heart Great Impact Foundation, has launched an extensive hygiene awareness campaign across public schools in Akwa IbomState. This initiative aims to promote basic hygiene practices in public schools across the state, making a significant impact on students' health and well-being.",
       `Speaking after a seminar held at Uyo High School on Friday, Mr. Francis Udofia, founder of the Francisco Udofia Foundation Africa, highlighted the motivation behind the initiative: "Our goal is to save lives and help young people become more conscious of essential hygiene practices such as maintaining a clean body, clean environment, clean hands, and a clear mind."`,
