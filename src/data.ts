@@ -21,9 +21,9 @@ type Menu = {
 type Event = {
   id: number;
   title: string;
-  date: string;
-  location: string;
-  theme: string | undefined;
+  date?: string;
+  location?: string;
+  theme?: string | undefined;
   description: string[];
   imageUrl: string;
   images?: string[];
@@ -60,7 +60,6 @@ export const events: Event[] = [
     id: 2,
     title: "PAD-A-GIRL INITIATIVE",
     location: "Lagos, Nigeria",
-    theme: "",
     date: "May, 2024",
     description: [
       "Menstrual hygiene is a huge problem in Nigeria & Africa. Unfortunately, menstruation is a subject that still largely remains a taboo. It is not a subject that is openly discussed. Hence, the scale of the problem and it's devastating impact are less known. The effort of the government and a few individuals alone will not suffice.",
@@ -93,6 +92,60 @@ export const events: Event[] = [
       "pad-a-girl/IMG_7708.jpg",
       "pad-a-girl/IMG_7717.jpg",
       "pad-a-girl/IMG_7621.jpg",
+    ],
+  },
+  {
+    id: 3,
+    title: "Health hygiene outreach",
+    location: "Uyo ,Akwa Ibom state",
+    theme: "Empowering Autistic Voices",
+    date: "17th October,2024",
+    description: [
+      "The Francisco Udofia Foundation Africa and the Big Heart Great Impact Foundation, has launched an extensive hygiene awareness campaign across public schools in Akwa IbomState. This initiative aims to promote basic hygiene practices in public schools across the state, making a significant impact on students' health and well-being.",
+      `Speaking after a seminar held at Uyo High School on Friday, Mr. Francis Udofia, founder of the Francisco Udofia Foundation Africa, highlighted the motivation behind the initiative: "Our goal is to save lives and help young people become more conscious of essential hygiene practices such as maintaining a clean body, clean environment, clean hands, and a clear mind."`,
+      "The Big Heart Great Impact Foundation, represented at the event by the State Head Faith Victor Umoetuk reiterated the importance of bringing this campaign to Akwa Ibom State. After making substantial impacts in other regions, the joint initiative is now set to bringing life-saving hygiene education to the forefront of the academic experience.",
+      "Representatives from both the Francisco Udofia Foundation Africa and Big Heart Great Impact Foundation emphasized that the seminar is just the beginning. Together, the two organizations are committed to educating young people about the importance of health and hygiene, ensuring that they can practice and sustain these habits for healthy growth.",
+      `The seminar, attended by hundreds of students, stressed the four critical components of hygiene, summarized as the "Four Cs": clean body, clean environment, clean hands, and clear mind. The foundation's co-organizers urged students to prioritize hygiene, with Mr. Udofianoting, "Washing your hands can be the difference between life and death. Studies show that washing hands effectively reduces bacterial exposure by 47%, a simple act that could save lives."`,
+      `In addition to practical hygiene tips, the initiative also emphasized the importance of mental well-being, encouraging students to foster positive thinking and avoid harmful thoughts. "Once you have peace of mind and are free from negative thinking, you become more aware of your health and surroundings," added Udofia.`,
+      `The senior prefect of Uyo High School, Master Eke-heaven Etim, expressed gratitude on behalf of the students: "We have learned so much today, and these lessons will stick with us. We appreciate the foundations for their support and for the gifts we received as reminders of the importance of hygiene."`,
+      "The campaign marks a significant milestone in ensuring students across Akwa Ibom State are empowered with the knowledge and tools necessary for better health and well-being, thanks to the collaboration between the Francisco Udofia Foundation Africa and the Big Heart Great Impact Foundation.",
+    ],
+    imageUrl: "health-outreach/2.jpeg",
+    images: [
+      "health-outreach/1.jpeg",
+      "health-outreach/3.jpeg",
+      "health-outreach/4.jpeg",
+      "health-outreach/5.jpeg",
+    ],
+  },
+  {
+    id: 4,
+    title: "Empowering a Healthier Community",
+    location: "Market Centre, Jos",
+    // theme:
+    //   "FUFAFRICA Partners with Jos University Medical Students Association to Raise Awareness on World Hepatitis Day 2024",
+    date: "July 27th, 2024",
+    description: [
+      `As part of our ongoing efforts to promote health and wellness in our community, [Your Foundation] is proud to announce its collaboration with the Jos University Medical Students Association (JUMSA) to mark World Hepatitis Day on July 27th, 2024. This year's theme, "Invest in Preventing Hepatitis", resonates deeply with our mission to create a healthier and more informed community.`,
+      `Key Objectives/Goals`,
+    ],
+    list: [
+      `1.⁠ ⁠Raise Awareness: Educate the public on the risks, symptoms, and prevention of hepatitis, a leading cause of liver disease worldwide.`,
+      `2.⁠ ⁠Promote Prevention: Encourage individuals to take proactive steps in preventing hepatitis, including vaccination, safe injection practices, and healthy lifestyle choices.`,
+      `3.⁠ ⁠Foster Community Engagement: Engage with local residents, market vendors, and traders to promote health awareness and encourage participation in disease prevention efforts.`,
+      `Advantages/outcomes:`,
+      `1.⁠ ⁠Increased Awareness: Educate thousands of people on the importance of hepatitis prevention and the risks associated with the disease.`,
+      `2.⁠ ⁠Improved Health Outcomes: Encourage individuals to take preventive measures, reducing the incidence of hepatitis and related liver diseases.`,
+      `3.⁠ ⁠Community Engagement: Foster a sense of ownership and responsibility among community members, promoting a culture of health and wellness.`,
+      `4.⁠ ⁠Capacity Building: Provide training and resources to JUMSA members, enhancing their skills and knowledge in health education and community outreach.`,
+      `5.⁠ ⁠Networking Opportunities: Facilitate partnerships between FUFAFRICA , JUMSA, and other stakeholders, driving collaborative efforts towards a healthier community.`,
+    ],
+    imageUrl: "community-health/5.jpeg",
+    images: [
+      "community-health/2.jpeg",
+      "community-health/3.jpeg",
+      "community-health/4.jpeg",
+      "community-health/1.jpeg",
     ],
   },
 ];

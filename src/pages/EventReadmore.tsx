@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-// import { FaLocationDot, FaRegCalendar } from "react-icons/fa6";
+import { FaLocationDot, FaRegCalendar } from "react-icons/fa6";
 import { useLocation } from "react-router-dom";
 // import PWHD from "../components/ProjectsWeHaveDone";
 import Volunteer from "../components/Volunteer";
@@ -12,7 +12,7 @@ interface EventData {
   description: string[];
   imageUrl: string;
   images: string[];
-  list?: string[]
+  list?: string[];
 }
 
 interface LocationState {
@@ -48,7 +48,9 @@ const EventReadmore: React.FC = () => {
         }
 
         // Filter out any null values from gallery URLs
-        const validGalleryUrls = galleryUrls.filter((url): url is string => url !== null);
+        const validGalleryUrls = galleryUrls.filter(
+          (url): url is string => url !== null
+        );
         setImageUrls(validGalleryUrls);
       } catch (error) {
         setError("Failed to load images");
@@ -86,16 +88,18 @@ const EventReadmore: React.FC = () => {
           <h1 className="text-[#1D2130] font-Roboto font-bold text-4xl md:text-6xl mb-8 md:mb-12">
             {item.title}
           </h1>
-          {/* <div className="flex flex-wrap gap-5">
-            <div className="flex items-center gap-3">
-              <FaLocationDot className="text-gray-600" />
-              <span className="text-gray-800">{item.location}</span>
+          {item.date && item.location && (
+            <div className="flex flex-wrap gap-5">
+              <div className="flex items-center gap-3">
+                <FaLocationDot className="text-gray-600" />
+                <span className="text-gray-800">{item.location}</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <FaRegCalendar className="text-gray-600" />
+                <span className="text-gray-800">{item.date}</span>
+              </div>
             </div>
-            <div className="flex items-center gap-3">
-              <FaRegCalendar className="text-gray-600" />
-              <span className="text-gray-800">{item.date}</span>
-            </div>
-          </div> */}
+          )}
         </div>
       </div>
 
@@ -119,25 +123,29 @@ const EventReadmore: React.FC = () => {
           </div>
 
           <div className="space-y-2 mt-4">
-            {item.list && item.list.map((list, index) => (
-              <p
-                key={index}
-                className="font-Roboto text-base text-[#525560] font-normal leading-relaxed"
-              >
-                {list}{item.list?.length !== index + 1 ? "," : "."}
-              </p>
-            ))}
+            {item.list &&
+              item.list.map((list, index) => (
+                <p
+                  key={index}
+                  className="font-Roboto text-base text-[#525560] font-normal leading-relaxed"
+                >
+                  {list}
+                  {item.list?.length !== index + 1 ? "," : "."}
+                </p>
+              ))}
           </div>
 
           {/* Main Image */}
           {isLoading ? (
             <div className="animate-pulse bg-gray-200 w-full h-96 rounded-lg mt-8" />
-          ) : mainImage && (
-            <img
-              className="w-full h-auto md:h-[500px] object-contain rounded-lg mt-8"
-              src={mainImage}
-              alt={item.title}
-            />
+          ) : (
+            mainImage && (
+              <img
+                className="w-full h-auto md:h-[500px] object-contain rounded-lg mt-8"
+                src={mainImage}
+                alt={item.title}
+              />
+            )
           )}
 
           {/* Image Gallery */}
